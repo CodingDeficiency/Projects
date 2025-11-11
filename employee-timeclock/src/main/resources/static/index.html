@@ -1,0 +1,742 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🕐 Time Clock System</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        header {
+            text-align: center;
+            color: white;
+            margin-bottom: 40px;
+            animation: fadeInDown 0.6s ease-out;
+        }
+
+        h1 {
+            font-size: 3rem;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+
+        .subtitle {
+            font-size: 1.2rem;
+            opacity: 0.9;
+        }
+
+        .card {
+            background: white;
+            border-radius: 15px;
+            padding: 30px;
+            margin-bottom: 20px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            animation: fadeInUp 0.6s ease-out;
+        }
+
+        .card h2 {
+            color: #667eea;
+            margin-bottom: 20px;
+            font-size: 1.8rem;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .button-group {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+
+        button {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border: none;
+            padding: 15px 25px;
+            border-radius: 8px;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-weight: 600;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(102, 126, 234, 0.4);
+        }
+
+        button:active {
+            transform: translateY(0);
+        }
+
+        button:disabled {
+            opacity: 0.6;
+            cursor: not-allowed;
+        }
+
+        input {
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 15px;
+            border: 2px solid #e0e0e0;
+            border-radius: 8px;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+        }
+
+        input:focus {
+            outline: none;
+            border-color: #667eea;
+            box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+        }
+
+        #result {
+            background: #f5f5f5;
+            padding: 20px;
+            border-radius: 8px;
+            margin-top: 20px;
+            font-family: 'Courier New', monospace;
+            font-size: 0.9rem;
+            max-height: 500px;
+            overflow-y: auto;
+            border: 1px solid #e0e0e0;
+        }
+
+        .employee-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .employee-card {
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            padding: 20px;
+            border-radius: 10px;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            border: 2px solid transparent;
+        }
+
+        .employee-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+            border-color: #667eea;
+        }
+
+        .employee-card h3 {
+            color: #333;
+            margin-bottom: 10px;
+            font-size: 1.3rem;
+        }
+
+        .employee-card p {
+            color: #666;
+            margin: 5px 0;
+        }
+
+        .employee-card .id-badge {
+            background: #667eea;
+            color: white;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            display: inline-block;
+            margin-top: 10px;
+        }
+
+        .success {
+            color: #2ecc71;
+            font-weight: bold;
+            padding: 15px;
+            background: #d4edda;
+            border-radius: 8px;
+            border-left: 4px solid #2ecc71;
+        }
+
+        .error {
+            color: #e74c3c;
+            font-weight: bold;
+            padding: 15px;
+            background: #f8d7da;
+            border-radius: 8px;
+            border-left: 4px solid #e74c3c;
+        }
+
+        .info {
+            color: #3498db;
+            font-weight: bold;
+            padding: 15px;
+            background: #d1ecf1;
+            border-radius: 8px;
+            border-left: 4px solid #3498db;
+        }
+
+        .loading {
+            text-align: center;
+            padding: 20px;
+            color: #667eea;
+        }
+
+        .loading::after {
+            content: '...';
+            animation: dots 1.5s infinite;
+        }
+
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes dots {
+
+            0%,
+            20% {
+                content: '.';
+            }
+
+            40% {
+                content: '..';
+            }
+
+            60%,
+            100% {
+                content: '...';
+            }
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            margin: 20px 0;
+        }
+
+        .stat-card {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+        }
+
+        .stat-card .stat-number {
+            font-size: 2.5rem;
+            font-weight: bold;
+            margin: 10px 0;
+        }
+
+        .stat-card .stat-label {
+            font-size: 0.9rem;
+            opacity: 0.9;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <h1>🕐 Time Clock System</h1>
+            <p class="subtitle">Employee Management & Time Tracking</p>
+        </header>
+
+        <!-- Stats Dashboard -->
+        <div class="card">
+            <h2>📊 Dashboard</h2>
+            <div class="stats-grid" id="statsGrid">
+                <div class="stat-card">
+                    <div class="stat-label">Total Employees</div>
+                    <div class="stat-number" id="totalEmployees">0</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-label">System Status</div>
+                    <div class="stat-number">✓</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Employee Management -->
+        <div class="card">
+            <h2>👥 Employee Management</h2>
+            <input type="text" id="firstName" placeholder="First Name">
+            <input type="text" id="lastName" placeholder="Last Name">
+            <input type="text" id="email" placeholder="Email">
+            <div class="button-group">
+                <button onclick="addEmployee()">➕ Add Employee</button>
+                <button onclick="getAllEmployees()">📋 View All Employees</button>
+            </div>
+        </div>
+
+        <!-- Punch In/Out -->
+        <div class="card">
+            <h2>⏰ Punch In/Out</h2>
+            <input type="number" id="punchEmployeeId" placeholder="Employee ID">
+            <div class="button-group">
+                <button onclick="punchIn()">🟢 Punch In</button>
+                <button onclick="punchOut()">🔴 Punch Out</button>
+                <button onclick="checkPunchStatus()">❓ Check Status</button>
+            </div>
+        </div>
+
+        <!-- Reports -->
+        <div class="card">
+            <h2>📊 Reports & Payment</h2>
+            <input type="number" id="reportEmployeeId" placeholder="Employee ID">
+            <div class="button-group">
+                <button onclick="calculatePayment()">💰 Calculate Payment</button>
+                <button onclick="getDailyHours()">📅 View Daily Hours</button>
+            </div>
+        </div>
+
+        <!-- Results -->
+        <div class="card">
+            <h2>📄 Results</h2>
+            <div id="result">Results will appear here... Try adding an employee or viewing all employees!</div>
+        </div>
+    </div>
+
+    <script>
+        const API_URL = 'http://localhost:8080/api';
+
+        // Initialize dashboard on page load
+        window.onload = function () {
+            checkAPIHealth();
+            getAllEmployees();
+            updateStats();
+        };// Check API health
+        async function checkAPIHealth() {
+            try {
+                const response = await fetch(`${API_URL}/health`);
+                const data = await response.json();
+                console.log('API Health:', data);
+            } catch (error) {
+                showError('Unable to connect to server. Make sure the application is running on port 8080.');
+            }
+        }
+
+        // Update statistics
+        async function updateStats() {
+            try {
+                const response = await fetch(`${API_URL}/employees`);
+                const employees = await response.json();
+                document.getElementById('totalEmployees').textContent = employees.length;
+            } catch (error) {
+                console.error('Error updating stats:', error);
+            }
+        }
+
+        // Display functions
+        function showResult(data, isHTML = false) {
+            const resultDiv = document.getElementById('result');
+            if (isHTML) {
+                resultDiv.innerHTML = data;
+            } else {
+                resultDiv.innerHTML = `<pre>${JSON.stringify(data, null, 2)}</pre>`;
+            }
+        }
+
+        function showError(message) {
+            document.getElementById('result').innerHTML = `<div class="error">❌ Error: ${message}</div>`;
+        }
+
+        function showSuccess(message) {
+            document.getElementById('result').innerHTML = `<div class="success">✅ ${message}</div>`;
+        }
+
+        function showInfo(message) {
+            document.getElementById('result').innerHTML = `<div class="info">ℹ️ ${message}</div>`;
+        }
+
+        function showLoading() {
+            document.getElementById('result').innerHTML = '<div class="loading">Loading</div>';
+        }
+
+        // Employee Management Functions
+        async function addEmployee() {
+            const firstName = document.getElementById('firstName').value.trim();
+            const lastName = document.getElementById('lastName').value.trim();
+            const email = document.getElementById('email').value.trim();
+
+            if (!firstName || !lastName || !email) {
+                showError('Please fill in all fields');
+                return;
+            }
+
+            showLoading();
+
+            try {
+                const response = await fetch(`${API_URL}/employees`, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ firstName, lastName, email })
+                });
+
+                const data = await response.json();
+
+                if (data.success) {
+                    showSuccess(`Employee added successfully! Employee ID: ${data.employeeId}`);
+
+                    // Clear form
+                    document.getElementById('firstName').value = '';
+                    document.getElementById('lastName').value = '';
+                    document.getElementById('email').value = '';
+
+                    // Refresh employee list and stats
+                    setTimeout(() => {
+                        getAllEmployees();
+                        updateStats();
+                    }, 1000);
+                } else {
+                    showError(data.message);
+                }
+            } catch (error) {
+                showError('Failed to add employee: ' + error.message);
+            }
+        }
+
+        async function getAllEmployees() {
+            showLoading();
+
+            try {
+                const response = await fetch(`${API_URL}/employees`);
+                const employees = await response.json();
+
+                if (employees.length === 0) {
+                    showInfo('No employees found. Add your first employee above!');
+                    return;
+                }
+
+                let html = '<div class="employee-list">';
+                employees.forEach(emp => {
+                    html += `
+                    <div class="employee-card" onclick="viewEmployeeDetails(${emp.id})">
+                        <h3>${emp.firstName} ${emp.lastName}</h3>
+                        <p><strong>📧 Email:</strong> ${emp.email}</p>
+                        <p><strong>📅 Joined:</strong> ${new Date(emp.createdDate).toLocaleDateString()}</p>
+                        <span class="id-badge">ID: ${emp.id}</span>
+                    </div>
+                `;
+                });
+                html += '</div>';
+
+                showResult(html, true);
+                updateStats();
+            } catch (error) {
+                showError('Failed to fetch employees: ' + error.message);
+            }
+        }
+
+        async function viewEmployeeDetails(employeeId) {
+            showLoading();
+
+            try {
+                const empResponse = await fetch(`${API_URL}/employees/${employeeId}`);
+                const employee = await empResponse.json();
+
+                const paymentResponse = await fetch(`${API_URL}/reports/payment/${employeeId}`);
+                const paymentData = await paymentResponse.json();
+
+                let html = `
+                <div style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 20px; border-radius: 10px; margin-bottom: 20px;">
+                    <h2 style="color: white; margin-bottom: 15px;">👤 ${employee.firstName} ${employee.lastName}</h2>
+                    <p><strong>Employee ID:</strong> ${employee.id}</p>
+                    <p><strong>Email:</strong> ${employee.email}</p>
+                    <p><strong>Member Since:</strong> ${new Date(employee.createdDate).toLocaleDateString()}</p>
+                </div>
+                
+                <div style="background: #f8f9fa; padding: 20px; border-radius: 10px; margin-bottom: 20px;">
+                    <h3 style="color: #667eea; margin-bottom: 15px;">💰 Payment Information (Last 14 Days)</h3>
+                    <p style="font-size: 2rem; font-weight: bold; color: #2ecc71;">$${paymentData.totalPayment.toFixed(2)}</p>
+                    <p style="color: #666;"><strong>Hourly Rate:</strong> $${paymentData.hourlyRate}/hour</p>
+                    <p style="color: #666;"><strong>Overtime Rate:</strong> $${paymentData.overtimeRate}/hour</p>
+                </div>
+                
+                <div style="background: #fff3cd; padding: 15px; border-radius: 8px; border-left: 4px solid #ffc107;">
+                    <h4 style="color: #856404; margin-bottom: 10px;">📅 Daily Hours Breakdown</h4>
+            `;
+
+                if (Object.keys(paymentData.dailyHours).length > 0) {
+                    for (const [date, hours] of Object.entries(paymentData.dailyHours)) {
+                        html += `<p style="color: #856404;"><strong>${date}:</strong> ${hours.toFixed(2)} hours</p>`;
+                    }
+                } else {
+                    html += '<p style="color: #856404;">No work hours recorded in the last 14 days.</p>';
+                }
+
+                html += '</div>';
+
+                showResult(html, true);
+            } catch (error) {
+                showError('Failed to fetch employee details: ' + error.message);
+            }
+        }
+
+        // Punch Functions
+        async function punchIn() {
+            const id = document.getElementById('punchEmployeeId').value.trim();
+            if (!id) {
+                showError('Please enter Employee ID');
+                return;
+            }
+
+            showLoading();
+
+            try {
+                const response = await fetch(`${API_URL}/punch/in/${id}`, {
+                    method: 'POST'
+                });
+                const data = await response.json();
+
+                if (data.success) {
+                    showSuccess(`${data.message}\n\nEmployee ID: ${data.employeeId}\nTime: ${new Date(data.timestamp).toLocaleString()}`);
+                } else {
+                    showError(data.message);
+                }
+            } catch (error) {
+                showError('Failed to punch in: ' + error.message);
+            }
+        }
+
+        async function punchOut() {
+            const id = document.getElementById('punchEmployeeId').value.trim();
+            if (!id) {
+                showError('Please enter Employee ID');
+                return;
+            }
+
+            showLoading();
+
+            try {
+                const response = await fetch(`${API_URL}/punch/out/${id}`, {
+                    method: 'POST'
+                });
+                const data = await response.json();
+
+                if (data.success) {
+                    showSuccess(`${data.message}\n\nEmployee ID: ${data.employeeId}\nTime: ${new Date(data.timestamp).toLocaleString()}`);
+                } else {
+                    showError(data.message);
+                }
+            } catch (error) {
+                showError('Failed to punch out: ' + error.message);
+            }
+        }
+
+        async function checkPunchStatus() {
+            const id = document.getElementById('punchEmployeeId').value.trim();
+            if (!id) {
+                showError('Please enter Employee ID');
+                return;
+            }
+
+            showLoading();
+
+            try {
+                const response = await fetch(`${API_URL}/punch/status/${id}`);
+                const data = await response.json();
+
+                const statusColor = data.canPunchOut ? '#2ecc71' : '#e74c3c';
+                const statusIcon = data.canPunchOut ? '🟢' : '🔴';
+
+                let html = `
+                <div style="background: ${statusColor}20; padding: 20px; border-radius: 10px; border-left: 4px solid ${statusColor};">
+                    <h3 style="color: ${statusColor}; margin-bottom: 10px;">${statusIcon} ${data.status}</h3>
+                    <p><strong>Employee ID:</strong> ${data.employeeId}</p>
+                    <p><strong>Can Punch Out:</strong> ${data.canPunchOut ? 'Yes' : 'No'}</p>
+                    <p style="margin-top: 15px; font-size: 0.9rem; color: #666;">
+                        ${data.canPunchOut
+                        ? 'Employee is currently punched in and can punch out.'
+                        : 'Employee is not punched in. Please punch in first.'}
+                    </p>
+                </div>
+            `;
+
+                showResult(html, true);
+            } catch (error) {
+                showError('Failed to check status: ' + error.message);
+            }
+        }
+
+        // Report Functions
+        async function calculatePayment() {
+            const id = document.getElementById('reportEmployeeId').value.trim();
+            if (!id) {
+                showError('Please enter Employee ID');
+                return;
+            }
+
+            showLoading();
+
+            try {
+                const response = await fetch(`${API_URL}/reports/payment/${id}`);
+
+                if (!response.ok) {
+                    showError('Employee not found');
+                    return;
+                }
+
+                const data = await response.json();
+
+                let html = `
+                <div style="background: linear-gradient(135deg, #2ecc71 0%, #27ae60 100%); color: white; padding: 25px; border-radius: 10px; margin-bottom: 20px;">
+                    <h2 style="color: white; margin-bottom: 10px;">💰 Payment Report</h2>
+                    <h3 style="color: white; opacity: 0.9;">${data.employeeName}</h3>
+                </div>
+                
+                <div style="background: #f8f9fa; padding: 20px; border-radius: 10px; margin-bottom: 20px;">
+                    <h3 style="color: #667eea; margin-bottom: 15px;">Total Payment</h3>
+                    <p style="font-size: 3rem; font-weight: bold; color: #2ecc71; margin: 20px 0;">$${data.totalPayment.toFixed(2)}</p>
+                    <p style="color: #666;"><strong>Report Period:</strong> ${data.reportPeriod}</p>
+                </div>
+                
+                <div style="background: #e3f2fd; padding: 20px; border-radius: 10px; margin-bottom: 20px;">
+                    <h4 style="color: #1976d2; margin-bottom: 15px;">💡 Rate Information</h4>
+                    <p style="color: #1565c0;"><strong>Regular Rate:</strong> $${data.hourlyRate}/hour (up to 8 hours/day)</p>
+                    <p style="color: #1565c0;"><strong>Overtime Rate:</strong> $${data.overtimeRate}/hour (over 8 hours/day)</p>
+                    <p style="margin-top: 10px; font-size: 0.9rem; color: #555;">
+                        <em>Overtime is calculated at 140% of the regular rate (40% premium)</em>
+                    </p>
+                </div>
+                
+                <div style="background: #fff3cd; padding: 20px; border-radius: 10px;">
+                    <h4 style="color: #856404; margin-bottom: 15px;">📅 Daily Hours Breakdown</h4>
+            `;
+
+                if (Object.keys(data.dailyHours).length > 0) {
+                    let totalHours = 0;
+                    for (const [date, hours] of Object.entries(data.dailyHours)) {
+                        totalHours += hours;
+                        const overtimeHours = hours > 8 ? hours - 8 : 0;
+                        const overtimeLabel = overtimeHours > 0 ? ` (includes ${overtimeHours.toFixed(2)}h overtime)` : '';
+                        html += `<p style="color: #856404;"><strong>${date}:</strong> ${hours.toFixed(2)} hours${overtimeLabel}</p>`;
+                    }
+                    html += `<hr style="margin: 15px 0; border: 1px solid #ffc107;">`;
+                    html += `<p style="color: #856404; font-size: 1.1rem;"><strong>Total Hours:</strong> ${totalHours.toFixed(2)} hours</p>`;
+                } else {
+                    html += '<p style="color: #856404;">No work hours recorded in the last 14 days.</p>';
+                }
+
+                html += '</div>';
+
+                showResult(html, true);
+            } catch (error) {
+                showError('Failed to calculate payment: ' + error.message);
+            }
+        }
+
+        async function getDailyHours() {
+            const id = document.getElementById('reportEmployeeId').value.trim();
+            if (!id) {
+                showError('Please enter Employee ID');
+                return;
+            }
+
+            showLoading();
+
+            try {
+                const response = await fetch(`${API_URL}/reports/hours/${id}`);
+
+                if (!response.ok) {
+                    showError('Employee not found');
+                    return;
+                }
+
+                const data = await response.json();
+
+                let html = `
+                <div style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 20px; border-radius: 10px; margin-bottom: 20px;">
+                    <h2 style="color: white;">📅 Daily Hours Report</h2>
+                    <p style="opacity: 0.9;">Employee ID: ${data.employeeId}</p>
+                </div>
+                
+                <div style="background: #f8f9fa; padding: 20px; border-radius: 10px;">
+            `;
+
+                if (Object.keys(data.dailyHours).length > 0) {
+                    let totalHours = 0;
+                    for (const [date, hours] of Object.entries(data.dailyHours)) {
+                        totalHours += hours;
+                        const barWidth = (hours / 12) * 100; // Scale bar (max 12 hours for display)
+                        html += `
+                        <div style="margin-bottom: 15px;">
+                            <div style="display: flex; justify-content: space-between; margin-bottom: 5px;">
+                                <strong>${date}</strong>
+                                <span>${hours.toFixed(2)} hours</span>
+                            </div>
+                            <div style="background: #e0e0e0; height: 20px; border-radius: 10px; overflow: hidden;">
+                                <div style="background: linear-gradient(90deg, #667eea 0%, #764ba2 100%); height: 100%; width: ${Math.min(barWidth, 100)}%; transition: width 0.3s ease;"></div>
+                            </div>
+                        </div>
+                    `;
+                    }
+                    html += `
+                    <hr style="margin: 20px 0; border: 1px solid #e0e0e0;">
+                    <div style="text-align: center; font-size: 1.3rem; font-weight: bold; color: #667eea;">
+                        Total: ${totalHours.toFixed(2)} hours
+                    </div>
+                `;
+                } else {
+                    html += '<p style="color: #666;">No work hours recorded in the last 14 days.</p>';
+                }
+
+                html += '</div>';
+
+                showResult(html, true);
+            } catch (error) {
+                showError('Failed to fetch daily hours: ' + error.message);
+            }
+        }
+
+        // Keyboard shortcuts
+        document.addEventListener('keydown', function (event) {
+            // Ctrl/Cmd + Enter to add employee when in employee form
+            if ((event.ctrlKey || event.metaKey) && event.key === 'Enter') {
+                const activeElement = document.activeElement;
+                if (activeElement.id === 'firstName' || activeElement.id === 'lastName' || activeElement.id === 'email') {
+                    addEmployee();
+                }
+            }
+        });
+    </script>
+</body>
+
+</html>
