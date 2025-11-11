@@ -8,6 +8,7 @@ public class EmployeeTimeclockApplication {
 
 	public static void main(String[] args) {
 		SpringApplication.run(EmployeeTimeclockApplication.class, args);
+
 	}
 
 }
