@@ -1,4 +1,4 @@
-package com.timeclock.employee_timeclock;
+package com.timeclock;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

@@ -13,7 +13,7 @@ import java.util.Map;
 @CrossOrigin(origins = "*")
 public class WelcomeController {
 
-    @GetMapping
+    @GetMapping()
     public Map<String, Object> welcome() {
         Map<String, Object> response = new HashMap<>();
         response.put("message", "Welcome to Time Clock API!");
