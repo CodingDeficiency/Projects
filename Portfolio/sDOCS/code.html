@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Portfolio - Projects</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#3b82f6", 
+                        "background-dark": "#0f1115",
+                        "background-card": "#181b21",
+                        "text-main": "#ededed",
+                        "text-muted": "#a1a1aa",
+                        "border-dark": "#272a30",
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+          font-variation-settings:
+          'FILL' 0,
+          'wght' 400,
+          'GRAD' 0,
+          'opsz' 24
+        }.no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+</head>
+<body class="bg-background-dark text-text-main font-display antialiased selection:bg-primary selection:text-white">
+<div class="relative flex h-auto min-h-screen w-full flex-col overflow-x-hidden">
+<header class="sticky top-0 z-50 w-full border-b border-border-dark bg-background-dark/80 backdrop-blur-md">
+<div class="layout-container flex h-full grow flex-col">
+<div class="px-4 md:px-10 lg:px-40 flex flex-1 justify-center py-4">
+<div class="layout-content-container flex flex-row items-center justify-between w-full max-w-[960px]">
+<div class="flex items-center gap-3 text-white">
+<div class="size-9 flex items-center justify-center rounded-lg bg-primary/20 text-primary border border-primary/20 shadow-[0_0_15px_rgba(59,130,246,0.15)]">
+<span class="material-symbols-outlined">terminal</span>
+</div>
+<h2 class="text-xl font-bold leading-tight tracking-tight">John Doe</h2>
+</div>
+<div class="hidden md:flex flex-1 justify-end gap-8 items-center">
+<nav class="flex items-center gap-1 bg-background-card/50 p-1 rounded-full border border-border-dark">
+<a class="px-4 py-1.5 text-sm font-medium text-text-muted hover:text-white hover:bg-white/5 rounded-full transition-all" href="#">Home</a>
+<a class="px-4 py-1.5 text-sm font-medium text-text-muted hover:text-white hover:bg-white/5 rounded-full transition-all" href="#">Resume</a>
+<a class="px-4 py-1.5 text-sm font-bold text-white bg-white/10 rounded-full shadow-sm ring-1 ring-white/5" href="#">Projects</a>
+<a class="px-4 py-1.5 text-sm font-medium text-text-muted hover:text-white hover:bg-white/5 rounded-full transition-all" href="#">Contact</a>
+</nav>
+<div class="flex gap-3 pl-4 border-l border-border-dark">
+<button class="group flex items-center justify-center rounded-full size-9 bg-background-card border border-border-dark hover:border-primary/50 hover:bg-primary/10 hover:text-primary text-text-muted transition-all duration-300">
+<span class="material-symbols-outlined text-[20px]">code</span>
+</button>
+<button class="group flex items-center justify-center rounded-full size-9 bg-background-card border border-border-dark hover:border-primary/50 hover:bg-primary/10 hover:text-primary text-text-muted transition-all duration-300">
+<span class="material-symbols-outlined text-[20px]">work</span>
+</button>
+</div>
+</div>
+<div class="md:hidden">
+<button class="flex items-center justify-center p-2 text-white hover:bg-white/10 rounded-lg transition-colors">
+<span class="material-symbols-outlined">menu</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</header>
+<main class="flex-1 relative">
+<div class="absolute top-0 left-1/2 -translate-x-1/2 w-full h-[500px] bg-primary/5 blur-[120px] rounded-full pointer-events-none z-0"></div>
+<section class="relative z-10 px-4 md:px-10 lg:px-40 flex justify-center py-12 md:py-20">
+<div class="layout-content-container flex flex-col max-w-[960px] flex-1">
+<div class="@container">
+<div class="flex flex-col gap-6 items-start justify-center text-left">
+<div class="flex flex-col gap-4 max-w-3xl">
+<h1 class="text-white text-5xl font-black leading-tight tracking-tight md:text-6xl bg-clip-text text-transparent bg-gradient-to-r from-white via-white to-white/60">
+                                Featured Projects
+                            </h1>
+<p class="text-text-muted text-lg font-normal leading-relaxed max-w-2xl">
+                                A curated selection of projects focusing on React, Node.js, and Mobile Development. 
+                                I build accessible, pixel-perfect, and performant web experiences.
+                            </p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="px-4 md:px-10 lg:px-40 flex justify-center pb-8 sticky top-[73px] z-40 bg-background-dark/95 backdrop-blur-sm py-4 md:static md:bg-transparent">
+<div class="layout-content-container flex flex-col max-w-[960px] flex-1">
+<div class="flex gap-3 overflow-x-auto no-scrollbar pb-2 md:pb-0 mask-gradient-r">
+<button class="flex h-9 shrink-0 items-center justify-center gap-x-2 rounded-full bg-primary px-5 transition-all shadow-[0_0_20px_rgba(59,130,246,0.3)] hover:shadow-[0_0_25px_rgba(59,130,246,0.5)] border border-primary/50">
+<p class="text-white text-sm font-semibold">All</p>
+</button>
+<button class="flex h-9 shrink-0 items-center justify-center gap-x-2 rounded-full bg-background-card border border-border-dark px-5 transition-all hover:bg-white/5 hover:border-white/20 hover:text-white group">
+<p class="text-text-muted group-hover:text-white text-sm font-medium transition-colors">Web Development</p>
+</button>
+<button class="flex h-9 shrink-0 items-center justify-center gap-x-2 rounded-full bg-background-card border border-border-dark px-5 transition-all hover:bg-white/5 hover:border-white/20 hover:text-white group">
+<p class="text-text-muted group-hover:text-white text-sm font-medium transition-colors">Mobile Apps</p>
+</button>
+<button class="flex h-9 shrink-0 items-center justify-center gap-x-2 rounded-full bg-background-card border border-border-dark px-5 transition-all hover:bg-white/5 hover:border-white/20 hover:text-white group">
+<p class="text-text-muted group-hover:text-white text-sm font-medium transition-colors">UI/UX</p>
+</button>
+<button class="flex h-9 shrink-0 items-center justify-center gap-x-2 rounded-full bg-background-card border border-border-dark px-5 transition-all hover:bg-white/5 hover:border-white/20 hover:text-white group">
+<p class="text-text-muted group-hover:text-white text-sm font-medium transition-colors">Open Source</p>
+</button>
+</div>
+</div>
+</section>
+<section class="px-4 md:px-10 lg:px-40 flex justify-center pb-20">
+<div class="layout-content-container flex flex-col max-w-[960px] flex-1">
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+<article class="group relative flex flex-col gap-4 rounded-2xl bg-background-card border border-border-dark p-4 shadow-lg shadow-black/20 transition-all duration-300 hover:-translate-y-1 hover:border-primary/40 hover:shadow-2xl hover:shadow-primary/5">
+<div class="relative aspect-video w-full overflow-hidden rounded-xl bg-background-dark/50 ring-1 ring-white/5">
+<div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105 opacity-80 group-hover:opacity-100" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDrGWknJ9RWaZ81rXAN86Rwvow2_9EFLukwrdZmgJcU_HclhDEV9OL1B0WIvaWqa0rem_o2Tde_bWEqTGCqRDwbl6EgLt6neVYSACrEcUS0JxKgZLMOrdoOCMt9BLgHuVZHyXNY4hyzHBJWgP25Uo0AKXpU-NFQC069YC-svCQb5sSTQa7Q7N5eXIii2Ab4m0COktn-xchs_RqPLoEmKrznN6s0MF9hsLmKJMWhF_Zw6hQOKpMF0kiZLlKFVuV7ZkycGVZ_lCaYV_MN");'></div>
+<div class="absolute inset-0 bg-gradient-to-t from-background-card via-transparent to-transparent opacity-60"></div>
+<div class="absolute top-3 right-3 flex gap-1 z-10">
+<span class="rounded-full bg-black/40 border border-white/10 px-2.5 py-1 text-[10px] font-bold uppercase tracking-wider text-primary backdrop-blur-md shadow-sm">React</span>
+</div>
+</div>
+<div class="flex flex-1 flex-col justify-between gap-4 px-1">
+<div>
+<h3 class="text-lg font-bold text-white group-hover:text-primary transition-colors">E-Commerce Dashboard</h3>
+<p class="mt-2 text-sm text-text-muted leading-relaxed line-clamp-2">
+                                    A comprehensive analytics dashboard for online retailers providing real-time data visualization and sales tracking.
+                                </p>
+</div>
+<div class="flex items-center gap-3 pt-2">
+<a class="flex flex-1 items-center justify-center gap-2 rounded-lg bg-white/5 py-2.5 text-xs font-bold uppercase tracking-wider text-white transition-all hover:bg-white/10 hover:shadow-lg hover:shadow-white/5 border border-white/5 hover:border-white/10" href="#">
+<span class="material-symbols-outlined text-[18px]">visibility</span>
+                                    Demo
+                                </a>
+<a class="flex flex-1 items-center justify-center gap-2 rounded-lg border border-border-dark py-2.5 text-xs font-bold uppercase tracking-wider text-text-muted transition-all hover:border-primary hover:text-primary hover:bg-primary/5" href="#">
+<span class="material-symbols-outlined text-[18px]">code</span>
+                                    Code
+                                </a>
+</div>
+</div>
+</article>
+<article class="group relative flex flex-col gap-4 rounded-2xl bg-background-card border border-border-dark p-4 shadow-lg shadow-black/20 transition-all duration-300 hover:-translate-y-1 hover:border-primary/40 hover:shadow-2xl hover:shadow-primary/5">
+<div class="relative aspect-video w-full overflow-hidden rounded-xl bg-background-dark/50 ring-1 ring-white/5">
+<div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105 opacity-80 group-hover:opacity-100" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDSEoFqBD4B1V4NQnfdq_51BSPSl0QYDoF0BNG_ji9gaKYl0DIey2_L7PavneRhyUv-KwyPJVdcWbrBFXktIoroRdFUC55-WLaYqQ8C8mKNdecQtfFZexoXYyLJbBSMxSyQwK5EE_fgN0nq7fUJmBe_vcOOWMbTQhwJh5uvs5GFTmnXVpnSpwBnC_qzquMIHIHV0U4y2ePMTEDpFH6odmX-uR_zjvAwOIN5bTUdgHKFO45kWZQ8srKMfb_4HsEOYgOmJoTBqYDoJXFA");'></div>
+<div class="absolute inset-0 bg-gradient-to-t from-background-card via-transparent to-transparent opacity-60"></div>
+<div class="absolute top-3 right-3 flex gap-1 z-10">
+<span class="rounded-full bg-black/40 border border-white/10 px-2.5 py-1 text-[10px] font-bold uppercase tracking-wider text-blue-400 backdrop-blur-md shadow-sm">Flutter</span>
+</div>
+</div>
+<div class="flex flex-1 flex-col justify-between gap-4 px-1">
+<div>
+<h3 class="text-lg font-bold text-white group-hover:text-primary transition-colors">Task Manager App</h3>
+<p class="mt-2 text-sm text-text-muted leading-relaxed line-clamp-2">
+                                    Cross-platform mobile application for personal productivity with cloud sync features and push notifications.
+                                </p>
+</div>
+<div class="flex items-center gap-3 pt-2">
+<a class="flex flex-1 items-center justify-center gap-2 rounded-lg bg-white/5 py-2.5 text-xs font-bold uppercase tracking-wider text-white transition-all hover:bg-white/10 hover:shadow-lg hover:shadow-white/5 border border-white/5 hover:border-white/10" href="#">
+<span class="material-symbols-outlined text-[18px]">visibility</span>
+                                    Demo
+                                </a>
+<a class="flex flex-1 items-center justify-center gap-2 rounded-lg border border-border-dark py-2.5 text-xs font-bold uppercase tracking-wider text-text-muted transition-all hover:border-primary hover:text-primary hover:bg-primary/5" href="#">
+<span class="material-symbols-outlined text-[18px]">code</span>
+                                    Code
+                                </a>
+</div>
+</div>
+</article>
+<article class="group relative flex flex-col gap-4 rounded-2xl bg-background-card border border-border-dark p-4 shadow-lg shadow-black/20 transition-all duration-300 hover:-translate-y-1 hover:border-primary/40 hover:shadow-2xl hover:shadow-primary/5">
+<div class="relative aspect-video w-full overflow-hidden rounded-xl bg-background-dark/50 ring-1 ring-white/5">
+<div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105 opacity-80 group-hover:opacity-100" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAd6ZQDg-zBcX3rPVwoq3xjyjMXrVKfEGVyaKo-bnLI4pX8-CACLAgyzi4QbYzPH2ihJXLw0Fg8autew1yul5sVQ9qvpYWWfNYqaJPYTyg829RhpM3y4nwYkk6bJPPP1Zan4VIjjx76B6hsmbKL4Y3Lj88wk5jUXQ-7qGRzQt86vH36Nh1KoiM9zzAHCUSh1_UceBFRHByTWpZsQQKm45IdETe8Eac9LD4V_2-Pous8X8MN7L3s-Rc9jqmDXM_mkqHrn2k2J_NPFJRU");'></div>
+<div class="absolute inset-0 bg-gradient-to-t from-background-card via-transparent to-transparent opacity-60"></div>
+<div class="absolute top-3 right-3 flex gap-1 z-10">
+<span class="rounded-full bg-black/40 border border-white/10 px-2.5 py-1 text-[10px] font-bold uppercase tracking-wider text-green-400 backdrop-blur-md shadow-sm">Node.js</span>
+</div>
+</div>
+<div class="flex flex-1 flex-col justify-between gap-4 px-1">
+<div>
+<h3 class="text-lg font-bold text-white group-hover:text-primary transition-colors">Social Media API</h3>
+<p class="mt-2 text-sm text-text-muted leading-relaxed line-clamp-2">
+                                    Robust RESTful API handling user authentication, post interactions, and real-time feed updates.
+                                </p>
+</div>
+<div class="flex items-center gap-3 pt-2">
+<a class="flex flex-1 items-center justify-center gap-2 rounded-lg bg-white/5 py-2.5 text-xs font-bold uppercase tracking-wider text-white transition-all hover:bg-white/10 hover:shadow-lg hover:shadow-white/5 border border-white/5 hover:border-white/10" href="#">
+<span class="material-symbols-outlined text-[18px]">visibility</span>
+                                    Docs
+                                </a>
+<a class="flex flex-1 items-center justify-center gap-2 rounded-lg border border-border-dark py-2.5 text-xs font-bold uppercase tracking-wider text-text-muted transition-all hover:border-primary hover:text-primary hover:bg-primary/5" href="#">
+<span class="material-symbols-outlined text-[18px]">code</span>
+                                    Code
+                                </a>
+</div>
+</div>
+</article>
+<article class="group relative flex flex-col gap-4 rounded-2xl bg-background-card border border-border-dark p-4 shadow-lg shadow-black/20 transition-all duration-300 hover:-translate-y-1 hover:border-primary/40 hover:shadow-2xl hover:shadow-primary/5">
+<div class="relative aspect-video w-full overflow-hidden rounded-xl bg-background-dark/50 ring-1 ring-white/5">
+<div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105 opacity-80 group-hover:opacity-100" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBBQD4e8ZsK8JejOwAzwoDA82s1R9tz4imwMFdDNcNp6k27xKSXAAje4n2D8EawVUc27XvKAQ0MdUkIjYpGf5DXVxMbSswIpk03-J04fAwKiOxlcWkWHCxOKUsNpuYO612-3Ats2-0jO9DoFG07DENnpxSM_Zl5_uab1ylNS1e2j0EIkY9W6nTn43GuGL7R0AqmHNHsdZD_WfGoEOHK772_jIRB54xR3lKmsWJQ2X4p3pg4aTBmbYHXbMYc6H_3IGmDu-oEwKAHw9Dt");'></div>
+<div class="absolute inset-0 bg-gradient-to-t from-background-card via-transparent to-transparent opacity-60"></div>
+<div class="absolute top-3 right-3 flex gap-1 z-10">
+<span class="rounded-full bg-black/40 border border-white/10 px-2.5 py-1 text-[10px] font-bold uppercase tracking-wider text-teal-400 backdrop-blur-md shadow-sm">Vue.js</span>
+</div>
+</div>
+<div class="flex flex-1 flex-col justify-between gap-4 px-1">
+<div>
+<h3 class="text-lg font-bold text-white group-hover:text-primary transition-colors">Weather Widget</h3>
+<p class="mt-2 text-sm text-text-muted leading-relaxed line-clamp-2">
+                                    A lightweight, embeddable weather widget consuming OpenWeatherMap API with geolocation support.
+                                </p>
+</div>
+<div class="flex items-center gap-3 pt-2">
+<a class="flex flex-1 items-center justify-center gap-2 rounded-lg bg-white/5 py-2.5 text-xs font-bold uppercase tracking-wider text-white transition-all hover:bg-white/10 hover:shadow-lg hover:shadow-white/5 border border-white/5 hover:border-white/10" href="#">
+<span class="material-symbols-outlined text-[18px]">visibility</span>
+                                    Demo
+                                </a>
+<a class="flex flex-1 items-center justify-center gap-2 rounded-lg border border-border-dark py-2.5 text-xs font-bold uppercase tracking-wider text-text-muted transition-all hover:border-primary hover:text-primary hover:bg-primary/5" href="#">
+<span class="material-symbols-outlined text-[18px]">code</span>
+                                    Code
+                                </a>
+</div>
+</div>
+</article>
+<article class="group relative flex flex-col gap-4 rounded-2xl bg-background-card border border-border-dark p-4 shadow-lg shadow-black/20 transition-all duration-300 hover:-translate-y-1 hover:border-primary/40 hover:shadow-2xl hover:shadow-primary/5">
+<div class="relative aspect-video w-full overflow-hidden rounded-xl bg-background-dark/50 ring-1 ring-white/5">
+<div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105 opacity-80 group-hover:opacity-100" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuABw7y-AE7CysDgovtCA0qS4S7d0s1l7i051mOXMiQv-P4ZOrHB329f6aC6Mw1Dcbbe-l7kNF4_u2YzJ7aP7meYOtNd7iS6l7dOuTBUXUfeH__VdShh9fTpYlKa8_s6qinVVgoDTX4oZ8O_UeL-saJSAL8Z5DE-W8AoT6kVre8EUOvd4KOPrvjrejabFvfcOafY0-PdMpTypMBdkXzamxPr17zwjJEwk_WAO36dizGWdVAEf0GVA08d1kVXX7gFDS_gHAuOdZTpQwiZ");'></div>
+<div class="absolute inset-0 bg-gradient-to-t from-background-card via-transparent to-transparent opacity-60"></div>
+<div class="absolute top-3 right-3 flex gap-1 z-10">
+<span class="rounded-full bg-black/40 border border-white/10 px-2.5 py-1 text-[10px] font-bold uppercase tracking-wider text-orange-400 backdrop-blur-md shadow-sm">HTML/CSS</span>
+</div>
+</div>
+<div class="flex flex-1 flex-col justify-between gap-4 px-1">
+<div>
+<h3 class="text-lg font-bold text-white group-hover:text-primary transition-colors">Portfolio v1</h3>
+<p class="mt-2 text-sm text-text-muted leading-relaxed line-clamp-2">
+                                    The first iteration of my personal portfolio site, built with vanilla HTML, SCSS, and JavaScript.
+                                </p>
+</div>
+<div class="flex items-center gap-3 pt-2">
+<a class="flex flex-1 items-center justify-center gap-2 rounded-lg bg-white/5 py-2.5 text-xs font-bold uppercase tracking-wider text-white transition-all hover:bg-white/10 hover:shadow-lg hover:shadow-white/5 border border-white/5 hover:border-white/10" href="#">
+<span class="material-symbols-outlined text-[18px]">visibility</span>
+                                    Visit
+                                </a>
+<a class="flex flex-1 items-center justify-center gap-2 rounded-lg border border-border-dark py-2.5 text-xs font-bold uppercase tracking-wider text-text-muted transition-all hover:border-primary hover:text-primary hover:bg-primary/5" href="#">
+<span class="material-symbols-outlined text-[18px]">code</span>
+                                    Code
+                                </a>
+</div>
+</div>
+</article>
+<article class="group relative flex flex-col gap-4 rounded-2xl bg-background-card border border-border-dark p-4 shadow-lg shadow-black/20 transition-all duration-300 hover:-translate-y-1 hover:border-primary/40 hover:shadow-2xl hover:shadow-primary/5">
+<div class="relative aspect-video w-full overflow-hidden rounded-xl bg-background-dark/50 ring-1 ring-white/5">
+<div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105 opacity-80 group-hover:opacity-100" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBmZphEfC-wVrmHv00qXLjEQKzhlczjYSBcya7v4j7bPRogJg_guI-1DAgyBH_0sICdlpg1GhxYojBgkCI_Y_e4FzmcPiTsTgz7Sa2I9QvBW-MKmvpkmIi7V504_ywzT6yzx4Iia__YLsGTVfEIYYnTZEBn7RKAzXpTr-GfYuu8H_6WaoBIKHVY-r6bzZlZBgUntPAGGg0mR6rWosljB-VgjwIS1vWZr5QcH6dr0JU5nXTpmcLAPrlbKxlS2OoAPbrJJVX-NNYYiXKG");'></div>
+<div class="absolute inset-0 bg-gradient-to-t from-background-card via-transparent to-transparent opacity-60"></div>
+<div class="absolute top-3 right-3 flex gap-1 z-10">
+<span class="rounded-full bg-black/40 border border-white/10 px-2.5 py-1 text-[10px] font-bold uppercase tracking-wider text-purple-400 backdrop-blur-md shadow-sm">Socket.io</span>
+</div>
+</div>
+<div class="flex flex-1 flex-col justify-between gap-4 px-1">
+<div>
+<h3 class="text-lg font-bold text-white group-hover:text-primary transition-colors">Realtime Chat</h3>
+<p class="mt-2 text-sm text-text-muted leading-relaxed line-clamp-2">
+                                    A responsive chat application featuring private messaging, rooms, and file sharing capabilities.
+                                </p>
+</div>
+<div class="flex items-center gap-3 pt-2">
+<a class="flex flex-1 items-center justify-center gap-2 rounded-lg bg-white/5 py-2.5 text-xs font-bold uppercase tracking-wider text-white transition-all hover:bg-white/10 hover:shadow-lg hover:shadow-white/5 border border-white/5 hover:border-white/10" href="#">
+<span class="material-symbols-outlined text-[18px]">visibility</span>
+                                    Demo
+                                </a>
+<a class="flex flex-1 items-center justify-center gap-2 rounded-lg border border-border-dark py-2.5 text-xs font-bold uppercase tracking-wider text-text-muted transition-all hover:border-primary hover:text-primary hover:bg-primary/5" href="#">
+<span class="material-symbols-outlined text-[18px]">code</span>
+                                    Code
+                                </a>
+</div>
+</div>
+</article>
+</div>
+</div>
+</section>
+</main>
+<footer class="border-t border-border-dark bg-background-card">
+<div class="px-4 md:px-10 lg:px-40 flex justify-center py-10">
+<div class="layout-content-container flex flex-col md:flex-row items-center justify-between w-full max-w-[960px] gap-6">
+<p class="text-sm text-text-muted">© 2024 John Doe. All rights reserved.</p>
+<div class="flex gap-8">
+<a class="text-sm text-text-muted hover:text-white transition-colors" href="#">Privacy Policy</a>
+<a class="text-sm text-text-muted hover:text-white transition-colors" href="#">Terms of Service</a>
+<a class="text-sm text-text-muted hover:text-white transition-colors" href="#">Contact Me</a>
+</div>
+</div>
+</div>
+</footer>
+</div>
+
+</body></html>
