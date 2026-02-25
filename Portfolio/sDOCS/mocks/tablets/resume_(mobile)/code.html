@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Developer Portfolio - Mobile CV</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#135bec",
+                        "background-light": "#f6f6f8",
+                        "background-dark": "#101622",
+                    },
+                    fontFamily: {
+                        "display": ["Inter"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        body { font-family: 'Inter', sans-serif; }
+        .timeline-line { width: 2px; background: linear-gradient(to bottom, #135bec, #135bec 50%, #1e293b 50%, #1e293b); background-size: 100% 20px; }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 min-h-screen pb-24">
+<!-- Header / Profile Section -->
+<header class="relative px-6 pt-12 pb-8 overflow-hidden">
+<div class="absolute top-0 right-0 -translate-y-1/2 translate-x-1/2 w-64 h-64 bg-primary/10 rounded-full blur-3xl"></div>
+<div class="relative z-10 flex flex-col items-center text-center">
+<div class="relative mb-6">
+<div class="w-28 h-28 rounded-full border-4 border-primary/20 p-1">
+<img alt="Alex Developer Profile" class="w-full h-full rounded-full object-cover" data-alt="Professional male developer headshot smiling" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBvBR_t_yYmf4tHjenMdic3m8kmLVAS4sLPXhm0p2BsoPaxZ_lz4QpbazfQFEfqWqLXrWFYV63T_x5Dry3tUUOwA1iIyaWBr_3a4eqVvwJTBaHC7ItuYz2yRv71PZDQV-EW8aQjGjhMmu4SK2OFRSWyT6W_w3IvffOeggfUOWaliHUI07GROCguSxpCHV-9ZvXAj6aVrRRQFEJ34TesvaNmDPY4FLGPayBMnrkpnYM1_I4kjiu6LARXLDQlDIPfolOF1HCqIr8dUBlk"/>
+</div>
+<div class="absolute bottom-1 right-1 bg-primary w-6 h-6 rounded-full border-2 border-background-dark flex items-center justify-center">
+<span class="material-symbols-outlined text-[14px] text-white">check</span>
+</div>
+</div>
+<h1 class="text-3xl font-bold tracking-tight mb-1">Alex Rivera</h1>
+<p class="text-primary font-semibold text-lg mb-4">Senior Full-Stack Engineer</p>
+<div class="flex gap-3 mb-6">
+<a class="w-10 h-10 rounded-lg bg-slate-200 dark:bg-slate-800 flex items-center justify-center hover:bg-primary/20 transition-colors" href="#">
+<span class="material-symbols-outlined text-xl">code</span>
+</a>
+<a class="w-10 h-10 rounded-lg bg-slate-200 dark:bg-slate-800 flex items-center justify-center hover:bg-primary/20 transition-colors" href="#">
+<span class="material-symbols-outlined text-xl">person</span>
+</a>
+<a class="w-10 h-10 rounded-lg bg-slate-200 dark:bg-slate-800 flex items-center justify-center hover:bg-primary/20 transition-colors" href="#">
+<span class="material-symbols-outlined text-xl">mail</span>
+</a>
+</div>
+<p class="text-slate-500 dark:text-slate-400 max-w-sm leading-relaxed text-sm">
+                Passionate about building scalable web applications and crafting exceptional user experiences with 8+ years of expertise in modern JavaScript ecosystems.
+            </p>
+</div>
+</header>
+<!-- Stats Bar -->
+<section class="px-6 mb-10">
+<div class="grid grid-cols-3 gap-3">
+<div class="bg-white dark:bg-slate-800/50 border border-slate-200 dark:border-slate-700/50 p-4 rounded-xl text-center">
+<span class="block text-2xl font-bold text-primary">8+</span>
+<span class="text-[10px] uppercase tracking-wider text-slate-500 font-bold">Years Exp.</span>
+</div>
+<div class="bg-white dark:bg-slate-800/50 border border-slate-200 dark:border-slate-700/50 p-4 rounded-xl text-center">
+<span class="block text-2xl font-bold text-primary">45</span>
+<span class="text-[10px] uppercase tracking-wider text-slate-500 font-bold">Projects</span>
+</div>
+<div class="bg-white dark:bg-slate-800/50 border border-slate-200 dark:border-slate-700/50 p-4 rounded-xl text-center">
+<span class="block text-2xl font-bold text-primary">12</span>
+<span class="text-[10px] uppercase tracking-wider text-slate-500 font-bold">Awards</span>
+</div>
+</div>
+</section>
+<!-- Skills Section -->
+<section class="px-6 mb-12">
+<div class="flex items-center gap-2 mb-6">
+<span class="material-symbols-outlined text-primary">terminal</span>
+<h2 class="text-xl font-bold tracking-tight">Technical Skills</h2>
+</div>
+<div class="space-y-6">
+<div>
+<h3 class="text-xs font-bold text-slate-500 uppercase tracking-widest mb-3">Frontend Development</h3>
+<div class="flex flex-wrap gap-2">
+<span class="px-3 py-1.5 bg-primary/10 text-primary border border-primary/20 rounded text-sm font-medium">React.js</span>
+<span class="px-3 py-1.5 bg-primary/10 text-primary border border-primary/20 rounded text-sm font-medium">TypeScript</span>
+<span class="px-3 py-1.5 bg-primary/10 text-primary border border-primary/20 rounded text-sm font-medium">Next.js</span>
+<span class="px-3 py-1.5 bg-primary/10 text-primary border border-primary/20 rounded text-sm font-medium">Tailwind CSS</span>
+<span class="px-3 py-1.5 bg-primary/10 text-primary border border-primary/20 rounded text-sm font-medium">Vue.js</span>
+</div>
+</div>
+<div>
+<h3 class="text-xs font-bold text-slate-500 uppercase tracking-widest mb-3">Backend &amp; DevOps</h3>
+<div class="flex flex-wrap gap-2">
+<span class="px-3 py-1.5 bg-slate-200 dark:bg-slate-800 border border-transparent rounded text-sm font-medium">Node.js</span>
+<span class="px-3 py-1.5 bg-slate-200 dark:bg-slate-800 border border-transparent rounded text-sm font-medium">PostgreSQL</span>
+<span class="px-3 py-1.5 bg-slate-200 dark:bg-slate-800 border border-transparent rounded text-sm font-medium">AWS (S3/EC2)</span>
+<span class="px-3 py-1.5 bg-slate-200 dark:bg-slate-800 border border-transparent rounded text-sm font-medium">Docker</span>
+<span class="px-3 py-1.5 bg-slate-200 dark:bg-slate-800 border border-transparent rounded text-sm font-medium">GraphQL</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Experience Section -->
+<section class="px-6 mb-12">
+<div class="flex items-center gap-2 mb-8">
+<span class="material-symbols-outlined text-primary">work</span>
+<h2 class="text-xl font-bold tracking-tight">Work Experience</h2>
+</div>
+<div class="relative space-y-10 pl-4">
+<!-- Vertical Line -->
+<div class="absolute left-0 top-2 bottom-2 w-0.5 bg-slate-200 dark:bg-slate-800"></div>
+<!-- Experience Item 1 -->
+<div class="relative">
+<div class="absolute -left-[21px] top-1.5 w-4 h-4 rounded-full bg-primary border-4 border-background-light dark:border-background-dark"></div>
+<div>
+<span class="text-xs font-bold text-primary mb-1 block">2021 — Present</span>
+<h3 class="text-lg font-bold">Senior Software Engineer</h3>
+<p class="text-slate-500 dark:text-slate-400 font-medium text-sm mb-3">TechNova Solutions • San Francisco</p>
+<ul class="space-y-2 text-sm text-slate-600 dark:text-slate-300">
+<li class="flex gap-2">
+<span class="text-primary">•</span>
+<span>Architected and led the migration of a legacy monolith to a microservices architecture using Node.js and AWS.</span>
+</li>
+<li class="flex gap-2">
+<span class="text-primary">•</span>
+<span>Improved application performance by 40% through advanced React caching strategies and code splitting.</span>
+</li>
+</ul>
+</div>
+</div>
+<!-- Experience Item 2 -->
+<div class="relative">
+<div class="absolute -left-[21px] top-1.5 w-4 h-4 rounded-full bg-slate-400 dark:bg-slate-700 border-4 border-background-light dark:border-background-dark"></div>
+<div>
+<span class="text-xs font-bold text-slate-500 mb-1 block">2018 — 2021</span>
+<h3 class="text-lg font-bold">Full Stack Developer</h3>
+<p class="text-slate-500 dark:text-slate-400 font-medium text-sm mb-3">CreativePulse Agency • New York</p>
+<ul class="space-y-2 text-sm text-slate-600 dark:text-slate-300">
+<li class="flex gap-2">
+<span class="text-primary">•</span>
+<span>Developed 15+ custom web applications for high-profile clients in the fintech and e-commerce sectors.</span>
+</li>
+<li class="flex gap-2">
+<span class="text-primary">•</span>
+<span>Collaborated with UI/UX designers to implement pixel-perfect, responsive interfaces.</span>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</section>
+<!-- Education Section -->
+<section class="px-6 mb-12">
+<div class="flex items-center gap-2 mb-6">
+<span class="material-symbols-outlined text-primary">school</span>
+<h2 class="text-xl font-bold tracking-tight">Education</h2>
+</div>
+<div class="space-y-4">
+<div class="bg-white dark:bg-slate-800/40 border border-slate-200 dark:border-slate-700/50 p-5 rounded-xl flex items-start gap-4">
+<div class="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-primary">account_balance</span>
+</div>
+<div>
+<h3 class="font-bold">Stanford University</h3>
+<p class="text-sm text-slate-500 dark:text-slate-400">M.S. in Computer Science</p>
+<p class="text-xs font-medium text-primary mt-1">Class of 2018</p>
+</div>
+</div>
+<div class="bg-white dark:bg-slate-800/40 border border-slate-200 dark:border-slate-700/50 p-5 rounded-xl flex items-start gap-4">
+<div class="w-12 h-12 bg-slate-200 dark:bg-slate-700/50 rounded-lg flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-slate-500">account_balance</span>
+</div>
+<div>
+<h3 class="font-bold">UC Berkeley</h3>
+<p class="text-sm text-slate-500 dark:text-slate-400">B.S. in Software Engineering</p>
+<p class="text-xs font-medium text-slate-500 mt-1">Class of 2016</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Sticky Bottom Navigation -->
+<nav class="fixed bottom-0 inset-x-0 z-50 p-4 pb-6 bg-white/80 dark:bg-background-dark/80 backdrop-blur-lg border-t border-slate-200 dark:border-slate-800">
+<div class="max-w-md mx-auto flex gap-3">
+<button class="flex-1 bg-primary text-white py-3.5 rounded-xl font-bold text-sm flex items-center justify-center gap-2 shadow-lg shadow-primary/25 active:scale-95 transition-transform">
+<span class="material-symbols-outlined text-xl">download</span>
+                Download CV
+            </button>
+<button class="w-14 h-14 bg-slate-100 dark:bg-slate-800 text-slate-900 dark:text-white rounded-xl flex items-center justify-center border border-slate-200 dark:border-slate-700 active:scale-95 transition-transform">
+<span class="material-symbols-outlined">share</span>
+</button>
+<button class="w-14 h-14 bg-slate-100 dark:bg-slate-800 text-slate-900 dark:text-white rounded-xl flex items-center justify-center border border-slate-200 dark:border-slate-700 active:scale-95 transition-transform">
+<span class="material-symbols-outlined">chat_bubble</span>
+</button>
+</div>
+</nav>
+<!-- Bottom Nav Bar (Component Sample Logic) -->
+<div class="hidden lg:block">
+<!-- Optional extra space for non-mobile views if needed -->
+</div>
+</body></html>

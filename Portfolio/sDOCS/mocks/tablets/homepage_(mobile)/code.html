@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Dev Portfolio - Alex Rivera</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#135bec",
+                        "background-light": "#f6f6f8",
+                        "background-dark": "#101622",
+                    },
+                    fontFamily: {
+                        "display": ["Inter"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-slate-100 antialiased overflow-x-hidden">
+<div class="relative flex min-h-screen w-full flex-col bg-background-light dark:bg-background-dark">
+<!-- Sticky Header -->
+<header class="sticky top-0 z-50 flex items-center justify-between bg-background-light/80 dark:bg-background-dark/80 px-4 py-4 backdrop-blur-md border-b border-slate-200 dark:border-slate-800">
+<div class="flex items-center gap-2">
+<div class="bg-primary size-8 rounded-lg flex items-center justify-center text-white font-bold">AR</div>
+<h2 class="text-lg font-bold leading-tight tracking-tight">Portfolio</h2>
+</div>
+<div class="flex items-center gap-4">
+<button class="text-slate-600 dark:text-slate-400">
+<span class="material-symbols-outlined">search</span>
+</button>
+<button class="text-slate-600 dark:text-slate-400">
+<span class="material-symbols-outlined">menu</span>
+</button>
+</div>
+</header>
+<!-- Main Content -->
+<main class="flex-1 overflow-y-auto">
+<!-- Hero Section -->
+<section class="flex flex-col items-center px-6 pt-10 pb-8 text-center @container">
+<div class="relative group">
+<!-- Decorative Glow -->
+<div class="absolute -inset-1 bg-primary/20 rounded-full blur-2xl group-hover:bg-primary/30 transition-all"></div>
+<!-- Profile Image -->
+<div class="relative bg-center bg-no-repeat aspect-square bg-cover rounded-full border-4 border-white dark:border-slate-800 shadow-xl size-40 mb-6" data-alt="Professional headshot of a smiling male developer" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBT1hixR94CQlfs661htogFPBtwFO6lYHedRlPjRb8uQPs1BbZ9DgJV7DtmMVxcZ11BaQCJGELn8IQcfSxpRVsDGX8LfMf24vlcIzqPBkcrbRYHE16Af1mE3a8tQ9N4gbTAK8wdk4gqiohXcfIdgRTIcGRbMijO4AlNzO8U45hTRqTx5_Cp7GWc_3xSgF7lvFNOINylQrQyOXf_qAYS375KMtuIZdokgmWl_8fQkPDurGzOMYl277U5c4N6mQ30sZCm7Lb7-PublnN-");'>
+</div>
+</div>
+<h1 class="text-3xl font-bold tracking-tight mb-2">Alex Rivera</h1>
+<p class="text-primary font-semibold mb-4">Full Stack Developer</p>
+<p class="text-slate-600 dark:text-slate-400 text-base leading-relaxed max-w-sm mb-8">
+                    Building scalable web solutions with a focus on high-performance UX and modern architecture.
+                </p>
+<!-- CTA Row -->
+<div class="flex w-full max-w-xs gap-3">
+<button class="flex-1 h-12 flex items-center justify-center rounded-lg bg-primary text-white font-bold shadow-lg shadow-primary/20 active:scale-95 transition-transform">
+                        Hire Me
+                    </button>
+<button class="flex-1 h-12 flex items-center justify-center rounded-lg bg-slate-200 dark:bg-slate-800 text-slate-900 dark:text-white font-bold active:scale-95 transition-transform">
+                        Projects
+                    </button>
+</div>
+<!-- Social Strip -->
+<div class="flex gap-6 mt-8 text-slate-500 dark:text-slate-400">
+<a class="hover:text-primary transition-colors" href="#"><span class="material-symbols-outlined">public</span></a>
+<a class="hover:text-primary transition-colors" href="#"><span class="material-symbols-outlined">code</span></a>
+<a class="hover:text-primary transition-colors" href="#"><span class="material-symbols-outlined">alternate_email</span></a>
+<a class="hover:text-primary transition-colors" href="#"><span class="material-symbols-outlined">person</span></a>
+</div>
+</section>
+<!-- Stats Grid -->
+<section class="grid grid-cols-2 gap-3 px-6 py-4">
+<div class="bg-slate-100 dark:bg-slate-800/50 p-4 rounded-xl border border-slate-200 dark:border-slate-800">
+<p class="text-2xl font-bold text-primary">5+</p>
+<p class="text-xs text-slate-500 dark:text-slate-400 font-medium">Years Exp.</p>
+</div>
+<div class="bg-slate-100 dark:bg-slate-800/50 p-4 rounded-xl border border-slate-200 dark:border-slate-800">
+<p class="text-2xl font-bold text-primary">40+</p>
+<p class="text-xs text-slate-500 dark:text-slate-400 font-medium">Projects Done</p>
+</div>
+</section>
+<!-- Tech Stack -->
+<section class="px-6 py-6">
+<div class="flex items-center justify-between mb-4">
+<h3 class="text-lg font-bold">Core Stack</h3>
+<span class="text-xs text-primary font-bold cursor-pointer">View All</span>
+</div>
+<div class="flex flex-wrap gap-2">
+<div class="flex h-9 items-center justify-center gap-2 rounded-lg bg-primary/10 border border-primary/20 px-4">
+<span class="text-primary text-sm font-semibold">React</span>
+</div>
+<div class="flex h-9 items-center justify-center gap-2 rounded-lg bg-slate-100 dark:bg-slate-800 px-4">
+<span class="text-slate-700 dark:text-slate-300 text-sm font-medium">Node.js</span>
+</div>
+<div class="flex h-9 items-center justify-center gap-2 rounded-lg bg-slate-100 dark:bg-slate-800 px-4">
+<span class="text-slate-700 dark:text-slate-300 text-sm font-medium">TypeScript</span>
+</div>
+<div class="flex h-9 items-center justify-center gap-2 rounded-lg bg-slate-100 dark:bg-slate-800 px-4">
+<span class="text-slate-700 dark:text-slate-300 text-sm font-medium">AWS</span>
+</div>
+<div class="flex h-9 items-center justify-center gap-2 rounded-lg bg-slate-100 dark:bg-slate-800 px-4">
+<span class="text-slate-700 dark:text-slate-300 text-sm font-medium">Next.js</span>
+</div>
+</div>
+</section>
+<!-- Recent Work Preview -->
+<section class="px-6 py-6 mb-20">
+<div class="flex items-center justify-between mb-4">
+<h3 class="text-lg font-bold">Recent Work</h3>
+<span class="material-symbols-outlined text-slate-400">arrow_forward</span>
+</div>
+<div class="bg-slate-100 dark:bg-slate-800 rounded-2xl overflow-hidden border border-slate-200 dark:border-slate-700">
+<div class="h-40 w-full bg-cover bg-center" data-alt="Modern dashboard interface with colorful charts and data" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCrTdaHeiehP2iGKrYfLOgjVtDpT-LfT2gr5imVK_GdSSoMvAlJKPr1Ab2T0-AFcUFYUeqj7vKwaiUULg4mnBkPvMRbudoNGXO1sIaYi-aAzCvZdPC-ic2-DCad_n_qhzytl-4XGA_VKCYSxZ5iiio-HfPHUqFidDn69bUVhQtXgI2ne7wRKCXUMyscJ3U1mQhjOGEn_qE1cruDWsYT23PBPbGBHhG6jYJc-uIc6hynkc11nOFCfxK1aTQVozvxNB_Y9RDgcAl38J48');">
+</div>
+<div class="p-4">
+<h4 class="font-bold text-base mb-1">Analytics Dashboard</h4>
+<p class="text-sm text-slate-500 dark:text-slate-400 line-clamp-1">Enterprise-grade tracking system for SaaS.</p>
+</div>
+</div>
+</section>
+</main>
+<!-- Bottom Navigation Bar -->
+<nav class="fixed bottom-0 left-0 right-0 z-50 flex items-center justify-around border-t border-slate-200 dark:border-slate-800 bg-white/90 dark:bg-background-dark/95 px-4 pb-6 pt-3 backdrop-blur-lg">
+<a class="flex flex-col items-center gap-1 text-primary" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1">home</span>
+<span class="text-[10px] font-bold uppercase tracking-wider">Home</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-slate-400 dark:text-slate-500" href="#">
+<span class="material-symbols-outlined">folder</span>
+<span class="text-[10px] font-bold uppercase tracking-wider">Projects</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-slate-400 dark:text-slate-500" href="#">
+<span class="material-symbols-outlined">description</span>
+<span class="text-[10px] font-bold uppercase tracking-wider">Resume</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-slate-400 dark:text-slate-500" href="#">
+<span class="material-symbols-outlined">send</span>
+<span class="text-[10px] font-bold uppercase tracking-wider">Contact</span>
+</a>
+</nav>
+</div>
+</body></html>

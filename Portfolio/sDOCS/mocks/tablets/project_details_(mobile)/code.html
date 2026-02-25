@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Project Details - Quantum Dashboard</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#135bec",
+                        "background-light": "#f6f6f8",
+                        "background-dark": "#101622",
+                        "surface-dark": "#1e293b",
+                        "border-dark": "#334155"
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            font-family: 'Inter', sans-serif;
+            -webkit-tap-highlight-color: transparent;
+        }
+        .hide-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .hide-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 antialiased font-display">
+<!-- Sticky Top Bar -->
+<header class="sticky top-0 z-50 flex items-center justify-between px-4 py-3 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-md border-b border-slate-200 dark:border-border-dark">
+<div class="flex items-center gap-3">
+<button class="flex items-center justify-center w-10 h-10 rounded-full hover:bg-slate-200 dark:hover:bg-surface-dark transition-colors">
+<span class="material-symbols-outlined text-2xl">arrow_back</span>
+</button>
+<h1 class="text-lg font-bold tracking-tight">Project Details</h1>
+</div>
+<div class="flex items-center gap-2">
+<button class="flex items-center justify-center w-10 h-10 rounded-full hover:bg-slate-200 dark:hover:bg-surface-dark transition-colors">
+<span class="material-symbols-outlined text-2xl">share</span>
+</button>
+<button class="flex items-center justify-center w-10 h-10 rounded-full hover:bg-slate-200 dark:hover:bg-surface-dark transition-colors text-primary">
+<span class="material-symbols-outlined text-2xl">favorite</span>
+</button>
+</div>
+</header>
+<main class="pb-24">
+<!-- Hero Section -->
+<section class="relative w-full h-64 md:h-80 overflow-hidden">
+<div class="absolute inset-0 bg-gradient-to-t from-background-dark via-background-dark/40 to-transparent z-10"></div>
+<img alt="Project Banner" class="w-full h-full object-cover" data-alt="Abstract dark technology data visualization dashboard" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAzY7LOag52WghkrXKWlRx4MrKed_EQ-y2syXpVmdziwkq4ZXgHu2uVuoG0bv4IRjx46HdgPN-VDmVtNpyOckdCmIO8J6iFSJbuZv_DE5LKv_Qyg75oRlUbVZhWIFLpF0DyB4atsvx7lV4s0N7wgD-XyG1FYymBUh5SW_36A4G5NQWfPrAqf95YnU4nAUvNwOVyXWBz-R1HbTahoqchLffT8n3HHmQ4Tn7g8rTrMPxfrtwMupuPeS6titq6MBy1E53KPHuF18tBDSsG"/>
+<div class="absolute bottom-0 left-0 right-0 p-6 z-20">
+<div class="flex items-center gap-2 mb-2">
+<span class="px-2 py-0.5 text-xs font-semibold tracking-wider uppercase bg-primary text-white rounded">Enterprise</span>
+<span class="px-2 py-0.5 text-xs font-semibold tracking-wider uppercase bg-surface-dark text-slate-300 rounded border border-border-dark">Open Source</span>
+</div>
+<h2 class="text-3xl font-bold text-white leading-tight">Quantum Dashboard v2.0</h2>
+<p class="text-slate-300 text-sm mt-1">High-performance cloud infrastructure monitoring</p>
+</div>
+</section>
+<!-- Stats Row -->
+<section class="px-4 py-6">
+<div class="grid grid-cols-3 gap-3">
+<div class="flex flex-col items-center justify-center p-4 rounded-xl bg-white dark:bg-surface-dark border border-slate-200 dark:border-border-dark shadow-sm">
+<span class="material-symbols-outlined text-primary mb-1">star</span>
+<span class="text-lg font-bold">4.8k</span>
+<span class="text-[10px] uppercase tracking-widest text-slate-500 dark:text-slate-400 font-medium">Stars</span>
+</div>
+<div class="flex flex-col items-center justify-center p-4 rounded-xl bg-white dark:bg-surface-dark border border-slate-200 dark:border-border-dark shadow-sm">
+<span class="material-symbols-outlined text-primary mb-1">history</span>
+<span class="text-lg font-bold">2.1.0</span>
+<span class="text-[10px] uppercase tracking-widest text-slate-500 dark:text-slate-400 font-medium">Version</span>
+</div>
+<div class="flex flex-col items-center justify-center p-4 rounded-xl bg-white dark:bg-surface-dark border border-slate-200 dark:border-border-dark shadow-sm">
+<span class="material-symbols-outlined text-primary mb-1">update</span>
+<span class="text-lg font-bold">2d ago</span>
+<span class="text-[10px] uppercase tracking-widest text-slate-500 dark:text-slate-400 font-medium">Updated</span>
+</div>
+</div>
+</section>
+<!-- About Section -->
+<section class="px-4 py-4">
+<h3 class="text-xl font-bold mb-3 flex items-center gap-2">
+<span class="w-1 h-6 bg-primary rounded-full"></span>
+                About Project
+            </h3>
+<div class="space-y-4 text-slate-600 dark:text-slate-400 leading-relaxed">
+<p>
+                    Quantum Dashboard is a cutting-edge monitoring solution designed specifically for modern cloud infrastructure. It bridges the gap between raw data and actionable insights for DevOps teams.
+                </p>
+<p>
+                    Featuring real-time data visualization, automated incident reporting, and seamless integration with major cloud providers like AWS, GCP, and Azure. Version 2.0 introduces a completely redesigned UI and enhanced processing speeds.
+                </p>
+</div>
+</section>
+<!-- Tech Stack -->
+<section class="py-4">
+<h3 class="px-4 text-xl font-bold mb-4 flex items-center gap-2">
+<span class="w-1 h-6 bg-primary rounded-full"></span>
+                Tech Stack
+            </h3>
+<div class="flex flex-col gap-4">
+<div class="space-y-2">
+<p class="px-4 text-xs font-bold uppercase tracking-widest text-slate-500">Frontend</p>
+<div class="flex overflow-x-auto gap-2 px-4 hide-scrollbar">
+<span class="flex-none px-4 py-2 bg-primary/10 text-primary border border-primary/20 rounded-lg text-sm font-medium">React 18</span>
+<span class="flex-none px-4 py-2 bg-primary/10 text-primary border border-primary/20 rounded-lg text-sm font-medium">Tailwind CSS</span>
+<span class="flex-none px-4 py-2 bg-primary/10 text-primary border border-primary/20 rounded-lg text-sm font-medium">TypeScript</span>
+<span class="flex-none px-4 py-2 bg-primary/10 text-primary border border-primary/20 rounded-lg text-sm font-medium">Framer Motion</span>
+</div>
+</div>
+<div class="space-y-2">
+<p class="px-4 text-xs font-bold uppercase tracking-widest text-slate-500">Backend</p>
+<div class="flex overflow-x-auto gap-2 px-4 hide-scrollbar">
+<span class="flex-none px-4 py-2 bg-slate-100 dark:bg-surface-dark text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-border-dark rounded-lg text-sm font-medium">Node.js</span>
+<span class="flex-none px-4 py-2 bg-slate-100 dark:bg-surface-dark text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-border-dark rounded-lg text-sm font-medium">PostgreSQL</span>
+<span class="flex-none px-4 py-2 bg-slate-100 dark:bg-surface-dark text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-border-dark rounded-lg text-sm font-medium">Redis</span>
+<span class="flex-none px-4 py-2 bg-slate-100 dark:bg-surface-dark text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-border-dark rounded-lg text-sm font-medium">Docker</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Screenshots -->
+<section class="py-4">
+<h3 class="px-4 text-xl font-bold mb-4 flex items-center gap-2">
+<span class="w-1 h-6 bg-primary rounded-full"></span>
+                Screenshots
+            </h3>
+<div class="flex overflow-x-auto gap-4 px-4 pb-4 hide-scrollbar">
+<div class="flex-none w-72 h-48 rounded-xl overflow-hidden border border-slate-200 dark:border-border-dark shadow-lg">
+<img alt="Screenshot 1" class="w-full h-full object-cover" data-alt="UI screenshot showing analytic charts and graphs" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAdKAm_kza8ngrJmV-VZ-qiFqybyOAAPfylbHg5_vnffKC4GoWGGAN4j8Z5MtY84om-xo_AWrB_OpT0oKU3LgELH2mZwGQRUYcVTEB3SY6I2j5bjI-NEd-bE-U5VDs6riWh79et5jaCWXhxVJKF2umWyaTqIic2VgkrMsP-AoWGNgLZnzUVLXExzENIuRr3sC82finR2do3Pc6OMMUp6QcolRbP9SLazyN3e8fL2Az7lwgjUcK4foLm5SSibNSXFrlaCHfMy9l7PsO2"/>
+</div>
+<div class="flex-none w-72 h-48 rounded-xl overflow-hidden border border-slate-200 dark:border-border-dark shadow-lg">
+<img alt="Screenshot 2" class="w-full h-full object-cover" data-alt="UI screenshot of server monitoring status list" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD3kIuE58RoGKCWaZZ8jHkCVVXCmoPMvzvuTzdAqS1aGjQ3-PfTwokO08t_PUA5YavAcrHjs9ZA88thalyl16ldXbufTlHhvCsv9lhintpIU2cMl5p6g9FCgIjPM1FlG8SdjQepVTd60NyDxaZ3x2XqQCzqTtmNDqyvpKrc28ZOMqG1YA_4KcTauOcNc5w5EPcZvIfzTCRsZP9nPBCN_7Kz4mRbyb2HuZZhN3V8SND3kSoCgmq3LtnTopXd6HVitZfTQ-byQ7mT91eL"/>
+</div>
+<div class="flex-none w-72 h-48 rounded-xl overflow-hidden border border-slate-200 dark:border-border-dark shadow-lg">
+<img alt="Screenshot 3" class="w-full h-full object-cover" data-alt="UI screenshot of code editor integration" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAi1ovw6hqopYOsF8JB3FL4VwTxytmTm-8S2v3WSiM_94TJuT_DrKzc36UZOnXXtaIoUtUVxGV11rO0mnS2O8S2zOyKBHPtH9-AJx_TWX98H67G3SSZZ7VvohmXF_vp_0_1GD4Htws2rRhjTbO7dND4mfIp6KwzuyHJMDLs2gfkVOB94xOhPU_Xp60-u2eJSdOg5kXGgNghOoUT0lBQdw8Ltu5LYX6uZ4ZXjjLGEdg03eSfAbThJ1YCQXlf2_CB5jX3hLngwj1Vs4e7"/>
+</div>
+</div>
+</section>
+<!-- Details List -->
+<section class="px-4 py-4">
+<div class="bg-white dark:bg-surface-dark rounded-xl border border-slate-200 dark:border-border-dark overflow-hidden">
+<div class="flex items-center justify-between p-4 border-b border-slate-100 dark:border-border-dark">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-slate-500">description</span>
+<span class="font-medium">License</span>
+</div>
+<span class="text-slate-500">MIT</span>
+</div>
+<div class="flex items-center justify-between p-4 border-b border-slate-100 dark:border-border-dark">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-slate-500">group</span>
+<span class="font-medium">Contributors</span>
+</div>
+<span class="text-slate-500">24 Active</span>
+</div>
+<div class="flex items-center justify-between p-4 border-b border-slate-100 dark:border-border-dark">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-slate-500">database</span>
+<span class="font-medium">Size</span>
+</div>
+<span class="text-slate-500">14.2 MB</span>
+</div>
+<div class="flex items-center justify-between p-4">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-slate-500">language</span>
+<span class="font-medium">Deployment</span>
+</div>
+<span class="text-green-500 font-medium">Live</span>
+</div>
+</div>
+</section>
+</main>
+<!-- Sticky Bottom Action Bar -->
+<footer class="fixed bottom-0 left-0 right-0 p-4 bg-background-light/90 dark:bg-background-dark/90 backdrop-blur-xl border-t border-slate-200 dark:border-border-dark flex gap-3 z-50">
+<button class="flex-1 py-3 px-6 bg-slate-200 dark:bg-surface-dark text-slate-900 dark:text-white rounded-xl font-bold flex items-center justify-center gap-2 hover:bg-slate-300 dark:hover:bg-slate-700 transition-colors">
+<span class="material-symbols-outlined">code</span>
+            Source
+        </button>
+<button class="flex-[2] py-3 px-6 bg-primary text-white rounded-xl font-bold flex items-center justify-center gap-2 hover:bg-primary/90 transition-shadow shadow-lg shadow-primary/25">
+<span class="material-symbols-outlined">rocket_launch</span>
+            Launch Project
+        </button>
+</footer>
+</body></html>

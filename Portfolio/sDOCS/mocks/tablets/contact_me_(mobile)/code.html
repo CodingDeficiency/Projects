@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Contact Us - Mobile</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#135bec",
+                        "background-light": "#f6f6f8",
+                        "background-dark": "#101622",
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 min-h-screen flex flex-col">
+<!-- Header -->
+<header class="sticky top-0 z-50 flex items-center bg-background-light dark:bg-background-dark/80 backdrop-blur-md px-4 py-4 border-b border-primary/10">
+<button class="flex items-center justify-center size-10 rounded-full hover:bg-primary/10 transition-colors">
+<span class="material-symbols-outlined text-slate-700 dark:text-slate-300">arrow_back</span>
+</button>
+<h1 class="flex-1 text-center text-lg font-semibold pr-10">Contact Us</h1>
+</header>
+<main class="flex-1 overflow-y-auto px-6 py-8 max-w-md mx-auto w-full">
+<!-- Hero Section -->
+<div class="text-center mb-10">
+<div class="inline-flex items-center justify-center size-16 bg-primary/10 rounded-2xl mb-6">
+<span class="material-symbols-outlined text-primary text-3xl">chat_bubble_outline</span>
+</div>
+<h2 class="text-3xl font-bold tracking-tight mb-3">Get in touch</h2>
+<p class="text-slate-500 dark:text-slate-400 text-base">
+                Have a question or feedback? We'd love to hear from you.
+            </p>
+</div>
+<!-- Contact Form -->
+<form action="#" class="space-y-6">
+<div class="space-y-2">
+<label class="text-sm font-medium text-slate-700 dark:text-slate-300 ml-1" for="full_name">Full Name</label>
+<div class="relative">
+<input class="w-full h-14 bg-white dark:bg-primary/5 border border-slate-200 dark:border-primary/20 rounded-xl px-4 text-base focus:ring-2 focus:ring-primary focus:border-primary transition-all placeholder:text-slate-400 dark:placeholder:text-slate-600" id="full_name" name="full_name" placeholder="e.g. Alex Johnson" required="" type="text"/>
+</div>
+</div>
+<div class="space-y-2">
+<label class="text-sm font-medium text-slate-700 dark:text-slate-300 ml-1" for="email">Email Address</label>
+<div class="relative">
+<input class="w-full h-14 bg-white dark:bg-primary/5 border border-slate-200 dark:border-primary/20 rounded-xl px-4 text-base focus:ring-2 focus:ring-primary focus:border-primary transition-all placeholder:text-slate-400 dark:placeholder:text-slate-600" id="email" name="email" placeholder="alex@example.com" required="" type="email"/>
+</div>
+</div>
+<div class="space-y-2">
+<label class="text-sm font-medium text-slate-700 dark:text-slate-300 ml-1" for="message">Message</label>
+<div class="relative">
+<textarea class="w-full bg-white dark:bg-primary/5 border border-slate-200 dark:border-primary/20 rounded-xl p-4 text-base focus:ring-2 focus:ring-primary focus:border-primary transition-all placeholder:text-slate-400 dark:placeholder:text-slate-600 resize-none" id="message" name="message" placeholder="How can we help you?" required="" rows="5"></textarea>
+</div>
+</div>
+<button class="w-full h-14 bg-primary hover:bg-primary/90 text-white font-semibold rounded-xl shadow-lg shadow-primary/20 transition-all active:scale-[0.98] mt-4 flex items-center justify-center gap-2" type="submit">
+<span>Send Message</span>
+<span class="material-symbols-outlined text-sm">send</span>
+</button>
+</form>
+<!-- Alternative Contact & Socials -->
+<div class="mt-12 pt-8 border-t border-slate-200 dark:border-primary/10">
+<p class="text-center text-sm font-medium text-slate-500 dark:text-slate-400 mb-6">Or reach us via</p>
+<div class="flex justify-center gap-6">
+<a class="flex flex-col items-center gap-2 group" href="#">
+<div class="size-12 rounded-full bg-white dark:bg-primary/10 flex items-center justify-center border border-slate-200 dark:border-primary/20 group-hover:border-primary transition-colors">
+<span class="material-symbols-outlined text-primary">mail</span>
+</div>
+<span class="text-xs font-medium text-slate-600 dark:text-slate-400">Email</span>
+</a>
+<a class="flex flex-col items-center gap-2 group" href="#">
+<div class="size-12 rounded-full bg-white dark:bg-primary/10 flex items-center justify-center border border-slate-200 dark:border-primary/20 group-hover:border-primary transition-colors">
+<span class="material-symbols-outlined text-primary">alternate_email</span>
+</div>
+<span class="text-xs font-medium text-slate-600 dark:text-slate-400">Twitter</span>
+</a>
+<a class="flex flex-col items-center gap-2 group" href="#">
+<div class="size-12 rounded-full bg-white dark:bg-primary/10 flex items-center justify-center border border-slate-200 dark:border-primary/20 group-hover:border-primary transition-colors">
+<span class="material-symbols-outlined text-primary">call</span>
+</div>
+<span class="text-xs font-medium text-slate-600 dark:text-slate-400">Support</span>
+</a>
+</div>
+</div>
+</main>
+<!-- Bottom Navigation Bar -->
+<nav class="sticky bottom-0 border-t border-slate-200 dark:border-primary/10 bg-white/80 dark:bg-background-dark/80 backdrop-blur-lg px-4 pb-6 pt-3">
+<div class="flex justify-around items-center max-w-md mx-auto">
+<a class="flex flex-col items-center gap-1 text-slate-400 dark:text-slate-500 hover:text-primary dark:hover:text-primary transition-colors" href="#">
+<span class="material-symbols-outlined">home</span>
+<span class="text-[10px] font-medium uppercase tracking-wider">Home</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-slate-400 dark:text-slate-500 hover:text-primary dark:hover:text-primary transition-colors" href="#">
+<span class="material-symbols-outlined">search</span>
+<span class="text-[10px] font-medium uppercase tracking-wider">Search</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-primary" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">mail</span>
+<span class="text-[10px] font-bold uppercase tracking-wider">Contact</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-slate-400 dark:text-slate-500 hover:text-primary dark:hover:text-primary transition-colors" href="#">
+<span class="material-symbols-outlined">person</span>
+<span class="text-[10px] font-medium uppercase tracking-wider">Profile</span>
+</a>
+</div>
+</nav>
+</body></html>

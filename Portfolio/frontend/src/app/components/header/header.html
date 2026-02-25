@@ -1,0 +1,101 @@
+<header class="header">
+  <div class="header__container">
+    <!-- Logo/Name -->
+    <a routerLink="/" class="header__logo" (click)="closeMenu()">
+      <img src="assets/images/logo.png" alt="Your Logo" class="header__logo-img" />
+      <span class="header__logo-text">Adams Daouda</span>
+    </a>
+
+    <!-- Desktop Navigation -->
+    <nav class="header__nav">
+      <ul class="header__nav-list">
+        <li class="header__nav-item">
+          <a
+            routerLink="/"
+            routerLinkActive="active"
+            [routerLinkActiveOptions]="{ exact: true }"
+            class="header__nav-link"
+          >
+            Home
+          </a>
+        </li>
+        <li class="header__nav-item">
+          <a routerLink="/portfolio" routerLinkActive="active" class="header__nav-link">
+            Projects
+          </a>
+        </li>
+        <li class="header__nav-item">
+          <a routerLink="/resume" routerLinkActive="active" class="header__nav-link"> Resume </a>
+        </li>
+        <li class="header__nav-item">
+          <a routerLink="/contact" routerLinkActive="active" class="header__nav-link"> Contact </a>
+        </li>
+        <a
+          href="assets/documents/resume.pdf"
+          download="Adams_Daouda_Resume.pdf"
+          class="header__resume-btn"
+        >
+          Download Resume
+        </a>
+      </ul>
+    </nav>
+
+    <!-- Mobile Menu Button -->
+    <button class="header__menu-button" (click)="toggleMenu()" aria-label="Toggle menu">
+      <span class="header__menu-icon" [class.active]="isMenuOpen">
+        <span></span>
+        <span></span>
+        <span></span>
+      </span>
+    </button>
+  </div>
+
+  <!-- Mobile Menu Overlay -->
+  <div class="header__mobile-menu" [class.active]="isMenuOpen">
+    <nav class="header__mobile-nav">
+      <ul class="header__mobile-list">
+        <li class="header__mobile-item">
+          <a
+            routerLink="/"
+            routerLinkActive="active"
+            [routerLinkActiveOptions]="{ exact: true }"
+            class="header__mobile-link"
+            (click)="closeMenu()"
+          >
+            Home
+          </a>
+        </li>
+        <li class="header__mobile-item">
+          <a
+            routerLink="/portfolio"
+            routerLinkActive="active"
+            class="header__mobile-link"
+            (click)="closeMenu()"
+          >
+            Projects
+          </a>
+        </li>
+        <li class="header__mobile-item">
+          <a
+            routerLink="/resume"
+            routerLinkActive="active"
+            class="header__mobile-link"
+            (click)="closeMenu()"
+          >
+            Resume
+          </a>
+        </li>
+        <li class="header__mobile-item">
+          <a
+            routerLink="/contact"
+            routerLinkActive="active"
+            class="header__mobile-link"
+            (click)="closeMenu()"
+          >
+            Contact
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</header>

@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Project Portfolio Gallery</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#135bec",
+                        "background-light": "#f6f6f8",
+                        "background-dark": "#101622",
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            font-family: 'Inter', sans-serif;
+            -webkit-tap-highlight-color: transparent;
+        }
+        .hide-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .hide-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 min-h-screen flex flex-col">
+<!-- Top App Bar -->
+<header class="sticky top-0 z-20 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-md border-b border-slate-200 dark:border-slate-800 px-4 py-3">
+<div class="flex items-center justify-between max-w-md mx-auto">
+<div class="flex items-center gap-3">
+<div class="size-10 rounded-full bg-primary/20 flex items-center justify-center border border-primary/30 overflow-hidden">
+<img alt="Profile" class="w-full h-full object-cover" data-alt="Professional developer portrait avatar" src="https://lh3.googleusercontent.com/aida-public/AB6AXuARY7_fanG2rVFAbbpqfH3sJkhajELnZ6ox_uMZja2JFtn6GIPnEvVo9nRtywGmfAawWEQeUOcnRYIn5OKyfCK5pNcZaHUWCTiYuNPS9588AOjII72d1JPuixKHq8v3b7TujjmRDHb1jfuiEdxB-UZdfCmHPMWwukVfyn-xmN5vvDcOvhSVGUQCF8NraQMSAJiWygSwW_--ItdDmBeUXTyFXPPYNBC31Ly86vOnT_EmUabDF-y7EcVtHsderCNc2AQZDHd-_Ky56nWZ"/>
+</div>
+<div>
+<h1 class="text-sm font-bold leading-none">Alex Rivera</h1>
+<p class="text-xs text-slate-500 dark:text-slate-400 mt-1">Product Designer</p>
+</div>
+</div>
+<div class="flex items-center gap-2">
+<button class="p-2 text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-lg transition-colors">
+<span class="material-symbols-outlined text-[24px]">search</span>
+</button>
+</div>
+</div>
+</header>
+<!-- Main Content Area -->
+<main class="flex-1 w-full max-w-md mx-auto pb-24">
+<!-- Filter Categories -->
+<div class="flex gap-2 p-4 overflow-x-auto hide-scrollbar">
+<button class="shrink-0 px-5 py-2 rounded-full bg-primary text-white text-sm font-semibold">All</button>
+<button class="shrink-0 px-5 py-2 rounded-full bg-slate-200 dark:bg-slate-800 text-slate-700 dark:text-slate-300 text-sm font-medium">UI/UX</button>
+<button class="shrink-0 px-5 py-2 rounded-full bg-slate-200 dark:bg-slate-800 text-slate-700 dark:text-slate-300 text-sm font-medium">Mobile</button>
+<button class="shrink-0 px-5 py-2 rounded-full bg-slate-200 dark:bg-slate-800 text-slate-700 dark:text-slate-300 text-sm font-medium">Web</button>
+<button class="shrink-0 px-5 py-2 rounded-full bg-slate-200 dark:bg-slate-800 text-slate-700 dark:text-slate-300 text-sm font-medium">Branding</button>
+</div>
+<!-- View Controls & Title -->
+<div class="px-4 py-2 flex items-center justify-between">
+<h2 class="text-lg font-bold tracking-tight">Recent Projects</h2>
+<div class="flex bg-slate-200 dark:bg-slate-800 p-1 rounded-lg">
+<button class="p-1.5 bg-white dark:bg-slate-700 rounded-md shadow-sm text-primary">
+<span class="material-symbols-outlined text-[20px] block">grid_view</span>
+</button>
+<button class="p-1.5 text-slate-500 dark:text-slate-400">
+<span class="material-symbols-outlined text-[20px] block">view_list</span>
+</button>
+</div>
+</div>
+<!-- Project Grid -->
+<div class="grid grid-cols-1 gap-6 p-4">
+<!-- Project Card 1 -->
+<div class="group bg-white dark:bg-slate-900 rounded-xl overflow-hidden border border-slate-200 dark:border-slate-800 shadow-sm">
+<div class="aspect-video w-full bg-slate-100 dark:bg-slate-800 overflow-hidden relative">
+<img alt="Fintech App" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Modern mobile app dashboard interface design" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBwMxwMeGzR09SBKsX98uIcAWfUzF7bPqEbUE5YUPHfKewgdNUJHWH3PLDph9YLCNgfASf5t5CBHkGi3Rr-HSfp5pkSuQOiyMEKjZ2dgQrZAsiU6qTmHQHVSVilSsm5V8qqhbc0oGlg7BmUfoplHPgvt50JGo0z4TzeHXlro9WiCCCtv1AvGq2yRe-aUyglFTo0jqQH3ihXYY_wQa0HAOtE2hEjbDSj7J5lqMHHC6tXGlGdheGuc1Vy1NlAKv6CvH1_qbtKp-_QbF0G"/>
+<div class="absolute top-3 right-3 bg-primary px-2 py-1 rounded text-[10px] font-bold text-white uppercase tracking-wider">Mobile</div>
+</div>
+<div class="p-4">
+<div class="flex justify-between items-start mb-2">
+<h3 class="font-bold text-base">Nova Fintech Dashboard</h3>
+<span class="text-[10px] font-medium text-slate-400 dark:text-slate-500">2023</span>
+</div>
+<p class="text-sm text-slate-600 dark:text-slate-400 line-clamp-2 mb-4">
+                        A comprehensive mobile banking solution focusing on accessibility and intuitive asset management for Gen-Z users.
+                    </p>
+<div class="flex flex-wrap gap-2 mb-4">
+<span class="px-2 py-0.5 rounded bg-slate-100 dark:bg-slate-800 text-[10px] font-medium text-slate-500">Figma</span>
+<span class="px-2 py-0.5 rounded bg-slate-100 dark:bg-slate-800 text-[10px] font-medium text-slate-500">SwiftUI</span>
+<span class="px-2 py-0.5 rounded bg-slate-100 dark:bg-slate-800 text-[10px] font-medium text-slate-500">Charts.js</span>
+</div>
+<button class="w-full py-2.5 bg-primary hover:bg-primary/90 text-white rounded-lg text-sm font-bold transition-colors flex items-center justify-center gap-2">
+                        View Project
+                        <span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</button>
+</div>
+</div>
+<!-- Project Card 2 -->
+<div class="group bg-white dark:bg-slate-900 rounded-xl overflow-hidden border border-slate-200 dark:border-slate-800 shadow-sm">
+<div class="aspect-video w-full bg-slate-100 dark:bg-slate-800 overflow-hidden relative">
+<img alt="E-commerce Web" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="E-commerce website landing page preview" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAYSBm2_JL5nxcxUGjNqjHi6CDx-XRwR98P8RjinlhWrw_t2_N487Df457cDqD1JAKhhZapMGLotQB-QSg7ESPuxa6h9LRbPyCIP9-fhfEWba44ZREZVIsq83dR7SaVKHVPzczvFSsT7l3-7joIOIodnwWpkoCwTzbgoCS8yhMcgGFtqvlUIWrgqvfqz-0VMoKUPEVt9lGCm3Auqrc4XVwd6ZEEZ5D29ZId3Hu9RbJ_iriKTSw-mL0HMFRf-9pbuFoSao3Q5zFns7kY"/>
+<div class="absolute top-3 right-3 bg-primary px-2 py-1 rounded text-[10px] font-bold text-white uppercase tracking-wider">Web</div>
+</div>
+<div class="p-4">
+<div class="flex justify-between items-start mb-2">
+<h3 class="font-bold text-base">Lumina Concept Store</h3>
+<span class="text-[10px] font-medium text-slate-400 dark:text-slate-500">2024</span>
+</div>
+<p class="text-sm text-slate-600 dark:text-slate-400 line-clamp-2 mb-4">
+                        High-end minimalist e-commerce platform developed with Next.js and Headless Shopify integration.
+                    </p>
+<div class="flex flex-wrap gap-2 mb-4">
+<span class="px-2 py-0.5 rounded bg-slate-100 dark:bg-slate-800 text-[10px] font-medium text-slate-500">React</span>
+<span class="px-2 py-0.5 rounded bg-slate-100 dark:bg-slate-800 text-[10px] font-medium text-slate-500">Next.js</span>
+<span class="px-2 py-0.5 rounded bg-slate-100 dark:bg-slate-800 text-[10px] font-medium text-slate-500">Shopify</span>
+</div>
+<button class="w-full py-2.5 bg-primary hover:bg-primary/90 text-white rounded-lg text-sm font-bold transition-colors flex items-center justify-center gap-2">
+                        View Project
+                        <span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</button>
+</div>
+</div>
+<!-- Project Card 3 (Simplified/Older) -->
+<div class="group bg-white dark:bg-slate-900 rounded-xl overflow-hidden border border-slate-200 dark:border-slate-800 shadow-sm">
+<div class="aspect-video w-full bg-slate-100 dark:bg-slate-800 overflow-hidden relative">
+<img alt="Branding" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Geometric brand identity and logo design" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBM5RhI6BM3u3MT-A_lLbj98KreMUEzM40o9whLFkXeVe6pGHZ0FXHcVB_Z8bISVozRdczJkNGKqIKKmKa9Hbkj4SaqAWGEirsElkGY_qrV5TKKX2lspYbeVPKnY-rJBkepwZEOMYeB6hL0gS-RDPnC8bWvu_sCuQcdDnOhJX4w1IBIvc5W24D6j9ngFMKNFLz9SSJZqiTfgUZ2TWEAGHSsOSyPqGxo7HCi0j2g7lLKJ-neTSy9jm6shAQYo55wubIf9QwlyAPVKh-5"/>
+<div class="absolute top-3 right-3 bg-primary px-2 py-1 rounded text-[10px] font-bold text-white uppercase tracking-wider">Branding</div>
+</div>
+<div class="p-4">
+<div class="flex justify-between items-start mb-2">
+<h3 class="font-bold text-base">Apex Cloud Systems</h3>
+<span class="text-[10px] font-medium text-slate-400 dark:text-slate-500">2022</span>
+</div>
+<p class="text-sm text-slate-600 dark:text-slate-400 line-clamp-2 mb-4">
+                        Full visual identity refresh for an enterprise cloud security provider including logo, iconography, and marketing collateral.
+                    </p>
+<button class="w-full py-2.5 bg-primary hover:bg-primary/90 text-white rounded-lg text-sm font-bold transition-colors flex items-center justify-center gap-2">
+                        View Project
+                        <span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</button>
+</div>
+</div>
+</div>
+</main>
+<!-- Bottom Navigation Bar -->
+<nav class="fixed bottom-0 left-0 right-0 z-30 bg-background-light dark:bg-slate-900/90 backdrop-blur-lg border-t border-slate-200 dark:border-slate-800 pb-safe">
+<div class="flex max-w-md mx-auto h-16 items-center px-4">
+<a class="flex flex-1 flex-col items-center justify-center gap-0.5 text-primary" href="#">
+<span class="material-symbols-outlined text-[24px]">folder_special</span>
+<span class="text-[10px] font-bold">Portfolio</span>
+</a>
+<a class="flex flex-1 flex-col items-center justify-center gap-0.5 text-slate-400 dark:text-slate-500 hover:text-primary transition-colors" href="#">
+<span class="material-symbols-outlined text-[24px]">person</span>
+<span class="text-[10px] font-medium">About</span>
+</a>
+<a class="flex flex-1 flex-col items-center justify-center gap-0.5 text-slate-400 dark:text-slate-500 hover:text-primary transition-colors" href="#">
+<span class="material-symbols-outlined text-[24px]">work</span>
+<span class="text-[10px] font-medium">Services</span>
+</a>
+<a class="flex flex-1 flex-col items-center justify-center gap-0.5 text-slate-400 dark:text-slate-500 hover:text-primary transition-colors" href="#">
+<span class="material-symbols-outlined text-[24px]">alternate_email</span>
+<span class="text-[10px] font-medium">Contact</span>
+</a>
+</div>
+</nav>
+<!-- Safe area spacing for mobile browsers -->
+<div class="h-6 bg-background-light dark:bg-slate-900"></div>
+</body></html>
