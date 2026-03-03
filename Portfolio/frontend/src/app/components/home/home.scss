@@ -339,14 +339,29 @@
   &__icon {
     width: 70px;
     height: 70px;
-    background: linear-gradient(135deg, var(--primary-color) 0%, #2563eb 100%);
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
     margin: 0 0 1.5rem 0;
+  }
+
+  &__icon i {
+    background: linear-gradient(135deg, var(--primary-color) 0%, #2563eb 100%);
     color: #ffffff;
     font-size: 1.8rem;
+  }
+
+  &__icon-img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+
+  &__icon-svg {
+    background: linear-gradient(135deg, var(--primary-color) 0%, #2563eb 100%);
+    border-radius: 50%;
+    color: white;
   }
 
   &__title {
@@ -371,18 +386,19 @@
   }
 
   &__button {
-    background: transparent;
-    border: 1px solid var(--primary-color);
-    color: var(--primary-color);
+    background: rgba(79, 111, 255, 0.1);
+    border: 1px solid rgba(79, 111, 255, 0.3);
+    color: #4f6bff;
     padding: 0.5rem 1rem;
-    border-radius: 8px;
+    border-radius: 5px;
     font-size: 0.9rem;
+    font-weight: 500;
     font-family: 'filson-pro', sans-serif;
-    cursor: pointer;
     transition: var(--transition);
+    cursor: pointer;
 
     &:hover {
-      background: var(--primary-color);
+      background: #4f6bff;
       color: #ffffff;
     }
   }
@@ -399,14 +415,29 @@
     padding: 0 20px;
   }
 
+  &__wrapper {
+    border-radius: 12px;
+    background: rgba(120, 130, 140, 0.3);
+    padding: 2rem;
+    margin: 2rem auto;
+    max-width: 1200px;
+    position: relative;
+  }
+
   &__content {
     display: grid;
-    grid-template-columns: 1fr 2fr;
-    gap: 4rem;
+    grid-template-columns: 1fr;
+    gap: 2rem;
     align-items: start;
+    margin-left: 480px;
   }
 
   &__left {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 500px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -414,9 +445,9 @@
 
   &__image-container {
     position: relative;
-    width: 280px;
-    height: 280px;
-    border-radius: 20px;
+    width: 500px;
+    height: 100%;
+    border-radius: 12px 0 0 12px;
     overflow: hidden;
     border: 3px solid rgba(255, 255, 255, 0.1);
     box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
@@ -442,18 +473,6 @@
     font-weight: 700;
     margin-bottom: 1.5rem;
     font-family: 'filson-pro', sans-serif;
-    position: relative;
-
-    &::after {
-      content: '';
-      position: absolute;
-      bottom: -8px;
-      left: 0;
-      width: 50px;
-      height: 3px;
-      background: var(--primary-color);
-      border-radius: 2px;
-    }
   }
 
   &__description {

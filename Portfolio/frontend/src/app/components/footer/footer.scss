@@ -26,7 +26,7 @@
       text-decoration: none;
 
       &-img {
-        height: 40px;
+        height: 24px;
         width: auto;
       }
 
@@ -101,9 +101,9 @@
     transition: color 0.3s ease;
 
     i {
-      margin-right: 10px;
-      width: 20px;
-      text-align: center;
+      margin-right: 0px;
+      width: 24px;
+      text-align: left;
       color: #4f6bff;
     }
 
@@ -128,6 +128,7 @@
       display: flex;
       align-items: center;
       justify-content: center;
+      text-decoration: none;
 
       &:hover {
         color: #ffffff;
