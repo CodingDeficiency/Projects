@@ -79,6 +79,7 @@ public class ProjectServiceImpl implements ProjectService {
                     project.setProjectUrl(projectDetails.getProjectUrl());
                     project.setGithubUrl(projectDetails.getGithubUrl());
                     project.setProjectDate(projectDetails.getProjectDate());
+                    project.setProjectCategories(projectDetails.getProjectCategories());
                     return projectRepository.save(project);
                 })
                 .orElseThrow(() -> new RuntimeException("Project not found with id " + id));

@@ -2,6 +2,7 @@ package com.portfolio.backend.model;
 
 import jakarta.persistence.*;
 import lombok.Data;
+import java.util.List;
 
 //Represents a project in the portfolio.
 //This entity maps to the 'projects' table in the database.
@@ -50,5 +51,12 @@ public class Project {
     // Can be null. making it an optional field
     // example: "2022-01-01"
     private String projectDate;
+
+    // Categories for grouping/filtering projects (e.g. "Web Development", "Mobile
+    // Apps"). A project can belong to multiple categories.
+    @ElementCollection
+    @CollectionTable(name = "project_categories", joinColumns = @JoinColumn(name = "project_id"))
+    @Column(name = "category")
+    private List<String> projectCategories;
 
 }

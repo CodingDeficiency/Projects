@@ -1,1 +1,168 @@
-<p>resume works!</p>
+<section class="experience">
+  <div class="experience__container">
+    <div class="experience__header">
+      <div class="experience-profile">
+        <div class="experience-profile__avatar">
+          <div class="experience-profile__status"></div>
+        </div>
+
+        <div class="experience-profile__info">
+          <div class="experience-profile__name">{{ profile.name }}</div>
+          <div class="experience-profile__title">{{ profile.title }}</div>
+          <div class="experience-profile__meta">
+            <i class="fa-solid fa-location-dot"></i>
+            <span>{{ profile.location }}</span>
+          </div>
+
+          <div class="experience-profile__links">
+            <a class="experience-pill" [href]="'mailto:' + profile.email">
+              <i class="fa-regular fa-envelope"></i>
+              <span>{{ profile.email }}</span>
+            </a>
+            <a class="experience-pill" [href]="profile.linkedin" target="_blank" rel="noreferrer">
+              <i class="fa-brands fa-linkedin"></i>
+              <span>linkedin.com</span>
+            </a>
+            <a class="experience-pill" [href]="profile.github" target="_blank" rel="noreferrer">
+              <i class="fa-brands fa-github"></i>
+              <span>github.com</span>
+            </a>
+          </div>
+        </div>
+
+        <div class="experience-profile__divider"></div>
+
+        <div class="experience-profile__summary">
+          <div class="experience-profile__summary-title">
+            <i class="fa-solid fa-user"></i>
+            <span>Professional Summary</span>
+          </div>
+          <p class="experience-profile__summary-text">{{ summary }}</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="experience__grid">
+      <aside class="experience__sidebar">
+        <div class="experience-card experience-card--skills">
+          <div class="experience-card__title">
+            <i class="fa-solid fa-screwdriver-wrench"></i>
+            <span>Skills</span>
+          </div>
+
+          <div class="experience-skill-group">
+            <div class="experience-skill-group__label">LANGUAGES</div>
+            <div class="experience-chips">
+              <span class="experience-chip" *ngFor="let s of skills.languages">{{ s }}</span>
+            </div>
+          </div>
+
+          <div class="experience-skill-group">
+            <div class="experience-skill-group__label">FRAMEWORKS</div>
+            <div class="experience-chips">
+              <span class="experience-chip" *ngFor="let s of skills.frameworks">{{ s }}</span>
+            </div>
+          </div>
+
+          <div class="experience-skill-group">
+            <div class="experience-skill-group__label">TOOLS</div>
+            <div class="experience-chips">
+              <span class="experience-chip" *ngFor="let s of skills.tools">{{ s }}</span>
+            </div>
+          </div>
+
+          <div class="experience-skill-group">
+            <div class="experience-skill-group__label">CONCEPTS</div>
+            <div class="experience-chips">
+              <span class="experience-chip" *ngFor="let s of skills.concepts">{{ s }}</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="experience-card experience-card--education">
+          <div class="experience-card__title">
+            <i class="fa-solid fa-graduation-cap"></i>
+            <span>Education</span>
+          </div>
+
+          <div class="experience-list">
+            <div class="experience-list-item" *ngFor="let ed of education">
+              <div class="experience-list-item__heading">{{ ed.degree }}</div>
+              <div class="experience-list-item__sub">{{ ed.school }}</div>
+              <div class="experience-list-item__meta">{{ ed.years }}</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="experience-card experience-card--certifications">
+          <div class="experience-card__title">
+            <i class="fa-solid fa-certificate"></i>
+            <span>Certifications</span>
+          </div>
+
+          <div class="experience-list">
+            <div class="experience-list-item" *ngFor="let c of certifications">
+              <div class="experience-list-item__heading">{{ c.name }}</div>
+              <div class="experience-list-item__sub">{{ c.issuer }}</div>
+              <div class="experience-list-item__meta">Issued {{ c.year }}</div>
+            </div>
+          </div>
+        </div>
+      </aside>
+
+      <section class="experience__main">
+        <div class="experience-card experience-card--timeline">
+          <div class="experience-card__title">
+            <i class="fa-solid fa-briefcase"></i>
+            <span>Work Experience</span>
+          </div>
+
+          <div class="timeline">
+            <div class="timeline-item" *ngFor="let xp of experiences">
+              <div class="timeline-item__marker"></div>
+              <div class="timeline-item__content">
+                <div class="timeline-item__top">
+                  <div class="timeline-item__role">{{ xp.role }}</div>
+                  <div class="timeline-item__years">{{ xp.years }}</div>
+                </div>
+                <div class="timeline-item__company">
+                  <i class="fa-regular fa-building"></i>
+                  <span>{{ xp.company }}</span>
+                </div>
+                <ul class="timeline-item__bullets">
+                  <li *ngFor="let b of xp.bullets">{{ b }}</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="experience-card experience-card--projects">
+          <div class="experience-card__title">
+            <i class="fa-solid fa-diagram-project"></i>
+            <span>Key Projects</span>
+          </div>
+
+          <div class="project-grid">
+            <a
+              class="project-card"
+              *ngFor="let p of projects"
+              [href]="p.href"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <div class="project-card__top">
+                <div class="project-card__name">{{ p.name }}</div>
+                <i class="fa-solid fa-arrow-up-right-from-square"></i>
+              </div>
+              <div class="project-card__desc">{{ p.description }}</div>
+              <div class="project-card__tags">
+                <span class="project-tag" *ngFor="let t of p.tags">{{ t }}</span>
+              </div>
+            </a>
+          </div>
+        </div>
+      </section>
+    </div>
+  </div>
+</section>

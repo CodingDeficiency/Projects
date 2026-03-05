@@ -1,1 +1,146 @@
-<p>contact works!</p>
+<section class="contact">
+  <div class="contact__container">
+    <div class="contact__hero">
+      <div class="contact__hero-pill">GET IN TOUCH</div>
+      <h1 class="contact__hero-title">Let's build something<br />amazing</h1>
+      <p class="contact__hero-subtitle">
+        I'm currently open to new opportunities. Whether you have a question about my stack, a
+        project proposal, or just want to say hi, I'll try my best to get back to you!
+      </p>
+    </div>
+
+    <div class="contact__grid">
+      <aside class="contact-info">
+        <h2 class="contact-info__title">Contact Information</h2>
+        <p class="contact-info__subtitle">Prefer other channels? Reach out directly.</p>
+
+        <div class="contact-info__cards">
+          <div class="contact-info-card">
+            <div class="contact-info-card__icon">
+              <i class="fa-solid fa-envelope"></i>
+            </div>
+            <div class="contact-info-card__content">
+              <div class="contact-info-card__label">Email</div>
+              <a class="contact-info-card__value" href="mailto:mail@adamsdaouda.com"
+                >mail@adamsdaouda.com</a
+              >
+            </div>
+          </div>
+
+          <div class="contact-info-card">
+            <div class="contact-info-card__icon">
+              <i class="fa-solid fa-share-nodes"></i>
+            </div>
+            <div class="contact-info-card__content">
+              <div class="contact-info-card__label">Socials</div>
+              <div class="contact-info-card__links">
+                <a href="https://www.linkedin.com" target="_blank" rel="noreferrer">LinkedIn</a>
+                <span class="contact-info-card__dot"></span>
+                <a href="https://github.com/CodingDeficiency" target="_blank" rel="noreferrer"
+                  >GitHub</a
+                >
+                <span class="contact-info-card__dot"></span>
+                <a href="https://twitter.com" target="_blank" rel="noreferrer">Twitter</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="contact-info-card">
+            <div class="contact-info-card__icon">
+              <i class="fa-solid fa-location-dot"></i>
+            </div>
+            <div class="contact-info-card__content">
+              <div class="contact-info-card__label">Location</div>
+              <div class="contact-info-card__value">Houston, TX</div>
+            </div>
+          </div>
+
+          <div class="contact-info__map">
+            <div class="contact-info__map-overlay">
+              <div class="contact-info__map-meta">
+                <div class="contact-info__map-kicker">BASE OF OPERATIONS</div>
+                <div class="contact-info__map-value">Houston Area</div>
+              </div>
+              <a
+                class="contact-info__map-pin"
+                href="https://maps.google.com/?q=Houston,+TX"
+                target="_blank"
+                rel="noreferrer"
+                aria-label="Open in Maps"
+              >
+                <i class="fa-solid fa-location-crosshairs"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </aside>
+
+      <section class="contact-form">
+        <h2 class="contact-form__title">Send a Message</h2>
+        <p class="contact-form__subtitle">
+          Fill out the form below and I'll get back to you within 24 hours.
+        </p>
+
+        <form class="contact-form__form" (submit)="onSubmit($event)">
+          <div class="contact-form__row">
+            <label class="contact-field">
+              <span class="contact-field__label">Name</span>
+              <div class="contact-field__control">
+                <i class="fa-regular fa-user"></i>
+                <input type="text" name="name" placeholder="John Doe" autocomplete="name" />
+              </div>
+            </label>
+
+            <label class="contact-field">
+              <span class="contact-field__label">Email</span>
+              <div class="contact-field__control">
+                <i class="fa-regular fa-at"></i>
+                <input
+                  type="email"
+                  name="email"
+                  placeholder="john@example.com"
+                  autocomplete="email"
+                />
+              </div>
+            </label>
+          </div>
+
+          <label class="contact-field">
+            <span class="contact-field__label">Subject</span>
+            <div class="contact-field__control">
+              <i class="fa-regular fa-folder"></i>
+              <select name="subject">
+                <option value="" selected disabled>Select a topic...</option>
+                <option value="project">Project Proposal</option>
+                <option value="question">Question</option>
+                <option value="opportunity">Opportunity</option>
+                <option value="other">Other</option>
+              </select>
+              <i class="fa-solid fa-chevron-down contact-field__chevron"></i>
+            </div>
+          </label>
+
+          <label class="contact-field">
+            <span class="contact-field__label">Message</span>
+            <div class="contact-field__control contact-field__control--textarea">
+              <i class="fa-regular fa-message"></i>
+              <textarea
+                name="message"
+                placeholder="Tell me about your project details..."
+                rows="7"
+              ></textarea>
+            </div>
+          </label>
+
+          <div class="contact-form__footer">
+            <div class="contact-form__captcha">Protected by reCAPTCHA</div>
+            <button class="contact-form__submit" type="submit">
+              <span>Send Message</span>
+              <i class="fa-solid fa-arrow-right"></i>
+            </button>
+          </div>
+        </form>
+      </section>
+    </div>
+  </div>
+</section>
