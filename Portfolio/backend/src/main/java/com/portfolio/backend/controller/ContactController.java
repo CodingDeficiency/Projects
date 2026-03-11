@@ -8,10 +8,11 @@ import java.util.List;
 
 /**
  * REST controller for handling contact-related HTTP requests.
- * Provides endpoints for visitors to send messages to the portfolio owner.
+ * Provides endpoints for visitors to send messages to portfolio owner.
  */
 @RestController
 @RequestMapping("/api/contacts")
+@CrossOrigin(origins = "http://localhost:4200") // Allow Angular frontend
 public class ContactController {
     private final ContactService contactService;
 

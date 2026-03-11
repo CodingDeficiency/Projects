@@ -81,13 +81,20 @@
           Fill out the form below and I'll get back to you within 24 hours.
         </p>
 
-        <form class="contact-form__form" (submit)="onSubmit($event)">
+        <form class="contact-form__form" (ngSubmit)="onSubmit()">
           <div class="contact-form__row">
             <label class="contact-field">
               <span class="contact-field__label">Name</span>
               <div class="contact-field__control">
                 <i class="fa-regular fa-user"></i>
-                <input type="text" name="name" placeholder="John Doe" autocomplete="name" />
+                <input
+                  type="text"
+                  name="name"
+                  placeholder="John Doe"
+                  autocomplete="name"
+                  [(ngModel)]="formData.name"
+                  required
+                />
               </div>
             </label>
 
@@ -100,6 +107,8 @@
                   name="email"
                   placeholder="john@example.com"
                   autocomplete="email"
+                  [(ngModel)]="formData.email"
+                  required
                 />
               </div>
             </label>
@@ -109,7 +118,7 @@
             <span class="contact-field__label">Subject</span>
             <div class="contact-field__control">
               <i class="fa-regular fa-folder"></i>
-              <select name="subject">
+              <select name="subject" [(ngModel)]="formData.subject" required>
                 <option value="" selected disabled>Select a topic...</option>
                 <option value="project">Project Proposal</option>
                 <option value="question">Question</option>
@@ -128,6 +137,8 @@
                 name="message"
                 placeholder="Tell me about your project details..."
                 rows="7"
+                [(ngModel)]="formData.message"
+                required
               ></textarea>
             </div>
           </label>
